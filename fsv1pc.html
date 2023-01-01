@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FindOut Search</title>
+<link rel="apple-touch-icon" sizes="180x180" href="file:///C:/Users/AR123/Downloads/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="file:///C:/Users/AR123/Downloads/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="file:///C:/Users/AR123/Downloads/favicon-16x16.png">
+<link rel="manifest" href="file:///C:/Users/AR123/Downloads/site.webmanifest">
+<meta name="theme-color" content="#00c2cb" />
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="10">
+<body onload="checkEdits()">
+<script>
+function checkEdits() {
+
+if(localStorage.userEdits!=null)
+document.getElementById("edit").innerHTML = localStorage.userEdits;
+}
+function saveEdits() {
+
+var editElem = document.getElementById("edit");
+
+var userVersion = editElem.innerHTML;
+
+localStorage.userEdits = userVersion;
+
+document.getElementById("update").innerHTML="your notations have been <b>saved.</b>";
+}
+</script>
+
+
+<style>
+body {
+background-color: lightblue;
+}
+h1, h2, h3, h4, h5, h6, p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+hr {
+  border: 5px solid #00c2cb;
+}
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 60%;
+  background-color: #89CFF0;
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #00c2cb;
+}
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #00c2cb; 
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #00c2cb; 
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #89CFF0; 
+}
+.button {
+  background-color: #00c2cb;
+  border: none;
+  color: black;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: Arial;
+  border: 1px solid black;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+input[type=button] {
+  background-color: #00c2cb;
+  border: none;
+  color: black;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: Arial;
+  border: 1px solid black;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<center>
+<a href="file:///C:/Users/AR123/Downloads/fsv1pc.html"><img src="https://lh3.googleusercontent.com/8UULTikBe-oqcBJWj69m5FgZnPDLjK_seCALOGP5V8ko1oZncWIN3AYO7lDps1bvcIdnadWCIvkuuNprUVwK8xG8sRwLRTmf5yicEPYpxQOHBsov-n1THcnaIhtMlFXZFZnc9bBF=w2400" alt="FindOut Search Logo" width="400" height="200"></a>
+</center>
+<center>
+<table>
+  <tr>
+  <th  class="tooltiptext"><i>About FindOut Search ▼</th></i>
+  </tr>
+  <tr>
+    <td>FindOut Search is a topic-based forum where users can find information on a variety of topics and subtopics from memes to anime <b>/fsaabout/</b></td>
+  </tr>
+ </table>
+ <br>
+ <table>
+  <tr>
+ 
+    <th><i><a href="file:///C:/Users/AR123/Downloads/fsmemetp.html">Memes ▼</th></i></a>
+	 <th><i><a href="file:///C:/Users/AR123/Downloads/fsanimetp.html">Anime ▼</th></i></a>
+	  <th><i><a href="file:///C:/Users/AR123/Downloads/fsdevtp.html">Developing ▼</th></i></a>
+  </tr>
+  <tr>
+ 
+    <td><a href="file:///C:/Users/AR123/Downloads/fspepest.html">pepe the frog <b>/pepememe/</b></td></a>
+	<td>one piece <b>/onepieceanime/</b></td>
+	<td>html <b>/htmldev/</b></td>
+  </tr>
+  <tr>
+
+    <td><a href="file:///C:/Users/AR123/Downloads/fseggdogst.html">eggdog <b>/eggdogmeme/</b></td></a>
+	<td>my hero academia <b>/mhaanime/</b></td>
+	<td>css <b>/cssdev/</b></td>
+  </tr>
+  <tr>
+
+	<td><a href="file:///C:/Users/AR123/Downloads/fsdogest.html">doge <b>/dogememe/</b></td></a>
+	<td>hunter x hunter <b>/hunteranime/</b></td>
+	<td>json <b>/jsondev/</b></td>
+  </tr>
+  <tr>
+
+    <td>down in ohio <b>/ohiomeme/<b></td>
+	<td>attack on titan <b>/aotanime/</b></td>
+	<td>javascript <b>/jsdev/</b></td>
+  </tr>
+  <tr>
+
+    <td>sigma <b>/sigmameme/</b></td>
+    <td>dragon ball z <b>/dbzanime/</b></td>
+	<td>php <b>/phpdev/</b></td>
+  </tr>
+  <tr>
+
+    <td>noot noot <b>/nootmeme/</b></td>
+    <td>demon slayer <b>/dslayeranime/</b></td>
+	<td>c# <b>/csharpdev/</b></td>
+  </tr>
+  </table>
+<br>
+<table>
+  <tr>
+  
+    <th><i><a href="file:///C:/Users/AR123/Downloads/fsvideogametp.html"> Video Games ▼</th></i>
+    <th><i><a href="file:///C:/Users/AR123/Downloads/fsyoutubetp.html"> Youtubers ▼</th></i>
+	 <th><i><a href="file:///C:/Users/AR123/Downloads/fsmathtp.html"> Math ▼</th></i>
+  </tr>
+  <tr>
+   
+    <td>gta 5 (v) <b>/gtav/</b></td>
+    <td>mrbeast <b>/mrbeastyt/</b></td>
+	<td>algebra <b>/algebra/</b></td>
+
+  </tr>
+  <tr>
+
+    <td>roblox <b>/roblox/</b></td>
+    <td>pewdiepie <b>/pewdieyt/</b></td>
+	<td>fractions <b>/fractions/</b></td>
+
+  </tr>
+  <tr>
+  
+	<td>fortnite <b>/fortnite/</b></td>
+    <td>sssniperwolf <b>/sniperwolfyt/</b></td>
+	<td>ratios <b>/ratios/</b></td>
+  </tr>
+  <tr>
+  
+    <td>fall guys <b>/fallguys/<b></td>
+    <td>gawr gura <b>/gawrgurayt/</b></td>
+	<td>integers <b>/integers/</b></td>
+
+  </tr>
+  <tr>
+
+    <td>genshin impact <b>/genshin/</b></td>
+    <td>keem star <b>/ksdramaalertyt/</b></td>
+	<td>multiplication <b>/multiply/</b></td>
+
+  </tr>
+  <tr>
+
+    <td>among us <b>/amongus/</b></td>
+    <td>itsfunneh <b>/funnehyt/</b></td>
+	<td>division <b>/divide/</b></td>
+
+  </tr>
+  </table>
+
+<br>
+<table>
+  <tr>
+    <th><i>This Version of FindOut Search ▼</th></i>
+  </tr>
+  <tr>
+    <td>V1.4 Beta (Released December 31, 2022): Individual pages for subtopics <b>/fsversion/</b></td>
+  </tr>
+ </table>
+ <br>
+<table>
+  <tr>
+    <th><i>Key ▼</th></i>
+  </tr>
+  <tr>
+    <td><b>/tag/</b> &#8592 this is a tag. tags are bold and in slashes. <b>/fstag/</b></td>
+  </tr>
+  <tr>
+   <td>subtopic  &#8592 this is a subtopic. subtopics come before a tag. subtopics can be in perenthesis if it is on its own page. <b>/fssubtopic/</b></td>
+  </tr>
+  <tr>
+   <td><i><b>Topic ▼</i></b>  &#8592 this is a topic. topics are italic and bold. they are at the top of a table or page. topics can be in perenthesis if it is on its own page. <b>/fstopic/</b></td>
+  </tr>
+  <tr>
+   <td><i><b>What/Who... ▼</i></b>  &#8592 this is a definition/description. definitions/descriptions are italic and bold. they are used to define or describe a topic or subtopic. <b>/fsdefinition/</b></td>
+  </tr>
+ </table>
+ <br>
+  <h6>This page auto refreshes to load the latest information.</h6>
+ <h6>Copyright © 2022 FindOut Search. All rights reserved.</h6>
+ <br>
+</center>
+</body>
+</html>
+
