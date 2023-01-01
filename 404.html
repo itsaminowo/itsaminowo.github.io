@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>FindOut Search</title>
+<title>FindOut Search / (Anime) /anime/</title>
 <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/itsaminowo/findoutsearch/main/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/itsaminowo/findoutsearch/main/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/itsaminowo/findoutsearch/main/favicon-16x16.png">
 <link rel="manifest" href="https://raw.githubusercontent.com/itsaminowo/findoutsearch/main/site.webmanifestt">
 <meta name="theme-color" content="#00c2cb" />
 <meta charset="UTF-8">
+<meta http-equiv="refresh" content="10">
+<body onload="checkEdits()">
 <script>
 function checkEdits() {
 
@@ -22,11 +24,10 @@ var userVersion = editElem.innerHTML;
 
 localStorage.userEdits = userVersion;
 
-document.getElementById("update").innerHTML="your notations have been <b>saved.</b>";
+document.getElementById("update").innerHTML="your notations been <b>saved.</b>";
+
 }
 </script>
-
-
 <style>
 body {
 background-color: lightblue;
@@ -104,15 +105,22 @@ input[type=button] {
 </style>
 </head>
 <body>
-<center>
-<a href="https://itsaminowo.github.io/findoutsearch/"><img src="https://lh3.googleusercontent.com/8UULTikBe-oqcBJWj69m5FgZnPDLjK_seCALOGP5V8ko1oZncWIN3AYO7lDps1bvcIdnadWCIvkuuNprUVwK8xG8sRwLRTmf5yicEPYpxQOHBsov-n1THcnaIhtMlFXZFZnc9bBF=w2400" alt="FindOut Search Logo" width="400" height="200"></a>
-<br>
-  </center>
-  <b><i><h1>404 Page Not Found</h1></b></i>
-  <b><i><h5>This web page does not exist witin FindOut Search. Try checking the URL you entered, and try again.</h5></b></i>
-  </center>
+<a href="https://itsaminowo.github.io/findoutsearch/" class="button"><b>back</b></a>
 
-  <br>
+<center>
+<h1><b><i>(Anime)</i> /anime/</b></h1>
+<input type="button" value="save my notations on all pages" onclick="saveEdits()"/>
+  
+<table>
+  <tr>
+    <th><i>What is 'Anime'? ▼</th></i>
+  </tr>
+  <tr>
+       <td>This web page does not exist within FindOut Search. Please check the URL you entered, and try again.<b>/anime/</b></td>
+	  <tr>
+ </table>
+ <br>
+  <h6>This page auto refreshes to load the latest information.</h6>
  <h6>Copyright © 2022 FindOut Search. All rights reserved.</h6>
  <br>
 </center>
