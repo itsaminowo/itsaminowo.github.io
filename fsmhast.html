@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FindOut Search / (my hero academia) /mhaanime/</title>
+<link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/itsaminowo/findoutsearch/main/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/itsaminowo/findoutsearch/main/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/itsaminowo/findoutsearch/main/favicon-16x16.png">
+<link rel="manifest" href="https://raw.githubusercontent.com/itsaminowo/findoutsearch/main/site.webmanifestt">
+<meta name="theme-color" content="#00c2cb" />
+<meta charset="UTF-8">
+<body onload="checkEdits()">
+<script>
+function checkEdits() {
+
+if(localStorage.userEdits!=null)
+document.getElementById("edit").innerHTML = localStorage.userEdits;
+}
+function saveEdits() {
+
+var editElem = document.getElementById("edit");
+
+var userVersion = editElem.innerHTML;
+
+localStorage.userEdits = userVersion;
+
+document.getElementById("update").innerHTML="your notations have been <b>saved.</b>";
+
+}
+</script>
+<style>
+body {
+background-color: lightblue;
+}
+h1, h2, h3, h4, h5, h6, p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+hr {
+  border: 5px solid #00c2cb;
+}
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 60%;
+  background-color: #89CFF0;
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #00c2cb;
+}
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #00c2cb; 
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #00c2cb; 
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #89CFF0; 
+}
+.button {
+  background-color: #00c2cb;
+  border: none;
+  color: black;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: Arial;
+  border: 1px solid black;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+input[type=button] {
+  background-color: #00c2cb;
+  border: none;
+  color: black;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: Arial;
+  border: 1px solid black;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<a href="https://itsaminowo.github.io/findoutsearch/" class="button"><b>back</b></a>
+
+<center>
+<h1><b><i>(my hero academia)</i> /mhaanime/</b></h1>
+<input type="button" value="save my notations on all pages" onclick="saveEdits()"/>
+<table>
+  <tr>
+    <th><i>What is 'my hero academia'? ▼</th></i>
+  </tr>
+  <tr>
+    <td>My Hero Academia is a Japanese superhero manga series written and illustrated by Kōhei Horikoshi. It has been serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump since July 2014, with its chapters additionally collected into 36 tankōbon volumes as of October 2022. (Refer to 'Anime' for a definition). (Definition from Wikipedia) <b>/mhaanime/</b></td>
+  </tr>
+ </table>
+ <br>
+  <table>
+  <tr>
+    <th><i>Notation Board ▼</th></i>
+  </tr>
+  <tr>
+    <td id="edit" contenteditable="true">/mhaanime/ notations:</td>
+  </tr>
+	<td id="update">this notation board can only be edited by you. <b>notations will save on all boards.</b></td>
+ </table>
+<br>
+<table>
+  <tr>
+    <th><i>This Version of FindOut Search ▼</th></i>
+  </tr>
+  <tr>
+    <td>V1.5 Beta (Released January 2, 2023): Auto refresh removed <b>/fsversion/</b></td>
+  </tr>
+ </table>
+ <br>
+<table>
+  <tr>
+    <th><i>Key ▼</th></i>
+  </tr>
+  <tr>
+    <td><b>/tag/</b> &#8592 this is a tag. tags are bold and in slashes. <b>/fstag/</b></td>
+  </tr>
+  <tr>
+   <td>subtopic  &#8592 this is a subtopic. subtopics come before a tag. subtopics can be in perenthesis if it is on its own page. <b>/fssubtopic/</b></td>
+  </tr>
+  <tr>
+   <td><i><b>Topic ▼</i></b>  &#8592 this is a topic. topics are italic and bold. they are at the top of a table or page. topics can be in perenthesis if it is on its own page. <b>/fstopic/</b></td>
+  </tr>
+  <tr>
+   <td><i><b>What/Who... ▼</i></b>  &#8592 this is a definition/description. definitions/descriptions are italic and bold. they are used to define or describe a topic or subtopic. <b>/fsdefinition/</b></td>
+  </tr>
+ </table>
+ <br>
+ <h6>Copyright © 2023 FindOut Search. All rights reserved.</h6>
+ <br>
+</center>
+</body>
+</html>
