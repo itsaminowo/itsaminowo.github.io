@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JXB1TPXT9H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JXB1TPXT9H');
+</script>
+<script type="text/javascript">
+	function googleTranslateElementInit() {
+	new google.translate.TranslateElement(
+	{pageLanguage: 'en'},
+	'google_translate_element'
+		);
+		 }
+</script>
+<script type="text/javascript" src= "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<title>FindOut Search / (Atari Breakout) /fsatari/</title>
+<link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/itsaminowo/findoutsearch/main/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/itsaminowo/findoutsearch/main/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/itsaminowo/findoutsearch/main/favicon-16x16.png">
+<link rel="manifest" href="https://raw.githubusercontent.com/itsaminowo/findoutsearch/main/site.webmanifestt">
+<meta name="theme-color" content="#00c2cb" />
+<meta charset="UTF-8">
+<body onload="checkEdits()">
+    <script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+var ballRadius = 10;
+var x = canvas.width/2;
+var y = canvas.height-30;
+var dx = 2;
+var dy = -2;
+var paddleHeight = 10;
+var paddleWidth = 75;
+var paddleX = (canvas.width-paddleWidth)/2;
+var rightPressed = false;
+var leftPressed = false;
+var brickRowCount = 5;
+var brickColumnCount = 3;
+var brickWidth = 75;
+var brickHeight = 20;
+var brickPadding = 10;
+var brickOffsetTop = 30;
+var brickOffsetLeft = 30;
+var score = 0;
+var lives = 3;
+
+var bricks = [];
+for(var c=0; c<brickColumnCount; c++) {
+  bricks[c] = [];
+  for(var r=0; r<brickRowCount; r++) {
+    bricks[c][r] = { x: 0, y: 0, status: 1 };
+  }
+}
+
+document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keyup", keyUpHandler, false);
+document.addEventListener("mousemove", mouseMoveHandler, false);
+
+function keyDownHandler(e) {
+    if(e.key == "Right" || e.key == "ArrowRight") {
+        rightPressed = true;
+    }
+    else if(e.key == "Left" || e.key == "ArrowLeft") {
+        leftPressed = true;
+    }
+}
+
+function keyUpHandler(e) {
+    if(e.key == "Right" || e.key == "ArrowRight") {
+        rightPressed = false;
+    }
+    else if(e.key == "Left" || e.key == "ArrowLeft") {
+        leftPressed = false;
+    }
+}
+
+function mouseMoveHandler(e) {
+  var relativeX = e.clientX - canvas.offsetLeft;
+  if(relativeX > 0 && relativeX < canvas.width) {
+    paddleX = relativeX - paddleWidth/2;
+  }
+}
+function collisionDetection() {
+  for(var c=0; c<brickColumnCount; c++) {
+    for(var r=0; r<brickRowCount; r++) {
+      var b = bricks[c][r];
+      if(b.status == 1) {
+        if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
+          dy = -dy;
+          b.status = 0;
+          score++;
+          if(score == brickRowCount*brickColumnCount) {
+            alert("You won!");
+            document.location.reload();
+          }
+        }
+      }
+    }
+  }
+}
+
+function drawBall() {
+  ctx.beginPath();
+  ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+  ctx.fillStyle = "#00c2cb";
+  ctx.fill();
+  ctx.closePath();
+}
+function drawPaddle() {
+  ctx.beginPath();
+  ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+  ctx.fillStyle = "#00c2cb";
+  ctx.fill();
+  ctx.closePath();
+}
+function drawBricks() {
+  for(var c=0; c<brickColumnCount; c++) {
+    for(var r=0; r<brickRowCount; r++) {
+      if(bricks[c][r].status == 1) {
+        var brickX = (r*(brickWidth+brickPadding))+brickOffsetLeft;
+        var brickY = (c*(brickHeight+brickPadding))+brickOffsetTop;
+        bricks[c][r].x = brickX;
+        bricks[c][r].y = brickY;
+        ctx.beginPath();
+        ctx.rect(brickX, brickY, brickWidth, brickHeight);
+        ctx.fillStyle = "#00c2cb";
+        ctx.fill();
+        ctx.closePath();
+      }
+    }
+  }
+}
+function drawScore() {
+  ctx.font = "16px Arial";
+  ctx.fillStyle = "#00c2cb";
+  ctx.fillText("Score: "+score, 8, 20);
+}
+function drawLives() {
+  ctx.font = "16px Arial";
+  ctx.fillStyle = "#00c2cb";
+  ctx.fillText("Lives: "+lives, canvas.width-65, 20);
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBricks();
+  drawBall();
+  drawPaddle();
+  drawScore();
+  drawLives();
+  collisionDetection();
+
+  if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+    dx = -dx;
+  }
+  if(y + dy < ballRadius) {
+    dy = -dy;
+  }
+  else if(y + dy > canvas.height-ballRadius) {
+    if(x > paddleX && x < paddleX + paddleWidth) {
+      dy = -dy;
+    }
+    else {
+      lives--;
+      if(!lives) {
+        alert("Uh oh, game over!");
+        document.location.reload();
+      }
+      else {
+        x = canvas.width/2;
+        y = canvas.height-30;
+        dx = 3;
+        dy = -3;
+        paddleX = (canvas.width-paddleWidth)/2;
+      }
+    }
+  }
+
+  if(rightPressed && paddleX < canvas.width-paddleWidth) {
+    paddleX += 7;
+  }
+  else if(leftPressed && paddleX > 0) {
+    paddleX -= 7;
+  }
+
+  x += dx;
+  y += dy;
+  requestAnimationFrame(draw);
+}
+
+draw();
+</script>
+<script>
+function checkEdits() {
+
+if(localStorage.userEdits!=null)
+document.getElementById("edit").innerHTML = localStorage.userEdits;
+}
+function saveEdits() {
+
+var editElem = document.getElementById("edit");
+
+var userVersion = editElem.innerHTML;
+
+localStorage.userEdits = userVersion;
+
+document.getElementById("update").innerHTML="your notations been <b>saved.</b>";
+
+}
+</script>
+<style>
+body {
+background-color: lightblue;
+}
+h1, h2, h3, h4, h5, h6, p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+hr {
+  border: 5px solid #00c2cb;
+}
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 60%;
+  background-color: #89CFF0;
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #00c2cb;
+}
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #00c2cb; 
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #00c2cb; 
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #89CFF0; 
+}
+.button {
+  background-color: #00c2cb;
+  border: none;
+  color: black;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: Arial;
+  border: 1px solid black;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+input[type=button] {
+  background-color: #00c2cb;
+  border: none;
+  color: black;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: Arial;
+  border: 1px solid black;
+  font-weight: bold;
+}
+      * {
+        padding: 0;
+        margin: 0;
+}
+      canvas {
+        background: white;
+        display: block;
+        margin: 0 auto;
+}
+</style>
+</head>
+<body>
+
+<br>
+<center>
+<h1><b><i>(Atari Breakout)</i> /fsatari/</b></h1>
+  
+<table>
+  <tr>
+    <th><i>What is 'Atari Breakout'? ▼</th></i>
+  </tr>
+  <tr>
+       <td>Breakout is an arcade video game developed and published by Atari, Inc. and released on May 13, 1976. It was designed by Steve Wozniak, based on conceptualization from Nolan Bushnell and Steve Bristow who were influenced by the seminal 1972 Atari arcade game Pong. <b>/fsatari/</b></td>
+	  <tr>
+ </table>
+ <br>
+ <center><div id="google_translate_element"></div></center>
+ <h6>Copyright © 2023 FindOut Search. All rights reserved.</h6>
+ <h6><a href="https://itsaminowo.github.io/findoutsearch/fsprivacy.html">Privacy Policy</h6></a>
+ <br>
+</center>
+</body>
+</html>
