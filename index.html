@@ -120,9 +120,35 @@ input[type=button] {
   border: 1px solid black;
   font-weight: bold;
 }
+.alert {
+  padding: 20px;
+  background-color: #00c2cb;
+  color: black;
+  margin-bottom: 15px;
+  font-family: Arial;
+}
+.closebutton {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.closebutton:hover {
+  color: black;
+}
 </style>
 </head>
 <body>
+<center>
+<div class="alert">
+  <span class="closebutton" onclick="this.parentElement.style.display='none';">(&#10005;)</span>
+  FindOut Search is not optimized for mobile use. (ignore this message if you are using FindOut Search on desktop)
+</div>
+</center>
 <center>
 <a href="https://itsaminowo.github.io/findoutsearch/"><img src="https://raw.githubusercontent.com/itsaminowo/findoutsearch/main/findout_search-removebg-preview.png" alt="FindOut Search Logo" width="400" height="200"></a>
 </center>
