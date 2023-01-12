@@ -49,10 +49,10 @@ document.getElementById("update").innerHTML="your notations have been <b>saved.<
 body {
 background-color: lightblue;
 }
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, div {
   font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
-
 hr {
   border: 5px solid #00c2cb;
 }
@@ -88,7 +88,6 @@ tr:nth-child(even) {
 }
 .button {
   background-color: #00c2cb;
-  border: none;
   color: black;
   padding: 10px 22px;
   text-align: center;
@@ -103,10 +102,10 @@ tr:nth-child(even) {
 a {
   text-decoration: none;
   color: black;
+  text-align: center;
 }
 input[type=button] {
   background-color: #00c2cb;
-  border: none;
   color: black;
   padding: 10px 22px;
   text-align: center;
@@ -124,10 +123,9 @@ input[type=button] {
 <body>
 <a href="https://itsaminowo.github.io/findoutsearch/" class="button"><b>back</b></a>
 
-<center>
 <h1><b><i>(dragon ball z)</i> /dbzanime/</b></h1>
 <input type="button" value="save my notations on all pages" onclick="saveEdits()"/>
-<table>
+<table style="margin-left:auto;margin-right:auto;">
   <tr>
     <th><i>What is 'dragon ball z'? ▼</th></i>
   </tr>
@@ -136,7 +134,7 @@ input[type=button] {
   </tr>
  </table>
  <br>
-  <table>
+  <table style="margin-left:auto;margin-right:auto;">
   <tr>
     <th><i>Notation Board ▼</th></i>
   </tr>
@@ -146,7 +144,7 @@ input[type=button] {
 	<td id="update">this notation board can only be edited by you. <b>notations will save on all boards.</b></td>
  </table>
 <br>
-<table>
+<table style="margin-left:auto;margin-right:auto;">
   <tr>
     <th><i>Key ▼</th></i>
   </tr>
@@ -164,10 +162,9 @@ input[type=button] {
   </tr>
  </table>
  <br>
- <center><div id="google_translate_element"></div></center>
+ <div id="google_translate_element"></div>
  <h6>Copyright © <script>document.write(new Date().getFullYear())</script> FindOut Search. All rights reserved.</h6>
  <h6><a href="https://itsaminowo.github.io/findoutsearch/fsprivacy.html">Privacy Policy</h6></a>
  <br>
-</center>
 </body>
 </html>
