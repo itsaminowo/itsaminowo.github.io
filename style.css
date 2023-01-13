@@ -29,7 +29,7 @@ tr:nth-child(even) {
   width: 20px;
 }
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px black; 
+  border: 1px solid balck 
   border-radius: 0px;
 }
 ::-webkit-scrollbar-thumb {
