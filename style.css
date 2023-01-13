@@ -75,4 +75,5 @@ input[type=button] {
     width: 500;
     height: 70px;
     object-fit: cover;
+    border: 1px solid black;
 }
