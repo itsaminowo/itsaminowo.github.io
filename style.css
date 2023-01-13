@@ -71,7 +71,7 @@ input[type=button] {
   font-weight: bold;
 }
 .cropad {
-    width: 500px;
+    width: 500;
     height: 70px;
     object-fit: cover;
 }
