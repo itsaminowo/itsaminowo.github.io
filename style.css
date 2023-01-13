@@ -70,3 +70,8 @@ input[type=button] {
   border: 1px solid black;
   font-weight: bold;
 }
+.cropad {
+    width: 468px; /* width of container */
+    height: 70px; /* height of container */
+    object-fit: cover;
+}
