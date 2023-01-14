@@ -74,21 +74,3 @@ input[type=button] {
     object-fit: cover;
     border: 1px solid black;
 }
-.badgegreen {
-  background-color: limegreen;
-  color: white;
-  padding: 4px 8px;
-  text-align: center;
-  border-radius: 5px;
-  font-family: Arial;
-  text-decoration: none;
-}
-.badgered {
-  background-color: red;
-  color: white;
-  padding: 4px 8px;
-  text-align: center;
-  border-radius: 5px;
-  font-family: Arial;
-  text-decoration: none;
-}
