@@ -3,7 +3,7 @@ body {
   background-image: linear-gradient(lightblue, #00c2cb);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 100% 100%;
   position: relative;
 }
 h1, h2, h3, h4, h5, h6, p, div {
