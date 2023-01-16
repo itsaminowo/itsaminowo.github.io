@@ -86,6 +86,3 @@ input[type=button]:hover {
     object-fit: cover;
     border: 1px solid black;
 }
-.cropad:hover {
-    background-image: url("https://raw.githubusercontent.com/itsaminowo/findoutsearch/main/fsmobilebannerx.png");
-}
