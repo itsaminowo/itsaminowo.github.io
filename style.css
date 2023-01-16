@@ -50,6 +50,7 @@ tr:nth-child(even) {
 }
 .button:hover {
   background: #0b8f96;
+  color: black;
 }
 a {
   text-decoration: none;
