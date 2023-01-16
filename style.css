@@ -56,6 +56,8 @@ a {
   text-decoration: none;
   color: black;
   text-align: center;
+a:hover {
+  color: #0b8f96;
 }
 input[type=button] {
   background-color: #00c2cb;
