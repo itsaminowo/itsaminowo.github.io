@@ -28,7 +28,7 @@ tr:nth-child(even) {
   width: 15px;
 }
 ::-webkit-scrollbar-track {
-  background: lightblue; 
+  background: white; 
 }
 ::-webkit-scrollbar-thumb {
   background: #00c2cb; 
