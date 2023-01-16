@@ -49,6 +49,9 @@ tr:nth-child(even) {
   font-family: Arial;
   border: 1px solid black;
 }
+.button:hover {
+  background: #0b8f96;
+}
 a {
   text-decoration: none;
   color: black;
@@ -67,6 +70,9 @@ input[type=button] {
   font-family: Arial;
   border: 1px solid black;
   font-weight: bold;
+}
+input[type=button]:hover {
+  background: #0b8f96;
 }
 .cropad {
     width: 525;
