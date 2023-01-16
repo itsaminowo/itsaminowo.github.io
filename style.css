@@ -1,7 +1,7 @@
 body {
   background-size: auto;
   background-color: lightblue;
-  background-image: linear-gradient(to left, #00c2cb, lightblue, #89CFF0);
+  background-image: linear-gradient(to left, #89CFF0, lightblue, #00c2cb);
 }
 h1, h2, h3, h4, h5, h6, p, div {
   font-family: Arial, Helvetica, sans-serif;
@@ -29,7 +29,7 @@ tr:nth-child(even) {
   width: 15px;
 }
 ::-webkit-scrollbar-track {
-  background: #89CFF0; 
+  background: lightblue; 
 }
 ::-webkit-scrollbar-thumb {
   background: #00c2cb;
