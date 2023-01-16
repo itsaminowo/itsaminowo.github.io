@@ -28,13 +28,13 @@ tr:nth-child(even) {
   width: 15px;
 }
 ::-webkit-scrollbar-track {
-  background: white; 
+  background: #89CFF0; 
 }
 ::-webkit-scrollbar-thumb {
   background: #00c2cb; 
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #89CFF0; 
+  background: lightblue; 
 }
 .button {
   background-color: #00c2cb;
