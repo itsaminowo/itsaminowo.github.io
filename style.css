@@ -29,7 +29,6 @@ tr:nth-child(even) {
 }
 ::-webkit-scrollbar-track {
   background: #89CFF0; 
-  border: 1px solid black;
 }
 ::-webkit-scrollbar-thumb {
   background: #00c2cb;
