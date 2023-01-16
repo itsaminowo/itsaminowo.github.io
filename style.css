@@ -24,18 +24,7 @@ td, th {
 tr:nth-child(even) {
   background-color: #00c2cb;
 }
-::-webkit-scrollbar {
-  width: 20px;
-}
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px #00c2cb; 
-}
-::-webkit-scrollbar-thumb {
-  background: #00c2cb; 
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #89CFF0; 
-}
+
 .button {
   background-color: #00c2cb;
   color: black;
