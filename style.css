@@ -83,6 +83,3 @@ input[type=button]:hover {
     object-fit: cover;
     border: 1px solid black;
 }
-.cropad:hover {
-  background: #0b8f96;
-}
