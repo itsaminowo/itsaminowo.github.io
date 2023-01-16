@@ -56,6 +56,7 @@ a {
   text-decoration: none;
   color: black;
   text-align: center;
+}
 a:hover {
   color: #0b8f96;
 }
