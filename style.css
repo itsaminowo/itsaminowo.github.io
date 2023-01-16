@@ -33,6 +33,9 @@ tr:nth-child(even) {
 ::-webkit-scrollbar-thumb {
   background: #00c2cb; 
 }
+::-webkit-scrollbar-thumb:hover {
+  background: #00adb5; 
+}
 .button {
   background-color: #00c2cb;
   color: black;
