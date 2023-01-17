@@ -27,23 +27,6 @@
 <meta name="theme-color" content="#00c2cb" />
 <meta charset="UTF-8">
 <body onload="checkEdits()">
-<script>
-function checkEdits() {
-
-if(localStorage.userEdits!=null)
-document.getElementById("edit").innerHTML = localStorage.userEdits;
-}
-function saveEdits() {
-
-var editElem = document.getElementById("edit");
-
-var userVersion = editElem.innerHTML;
-
-localStorage.userEdits = userVersion;
-
-document.getElementById("update").innerHTML="your notations have been <b>saved.</b>";
-}
-</script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
