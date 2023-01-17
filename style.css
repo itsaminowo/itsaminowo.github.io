@@ -4,14 +4,14 @@ body {
   background-image: linear-gradient(to left, #89CFF0, lightblue, #00c2cb);
 }
 h1, h2, h3, h4, h5, h6, p, div {
-  font-family: 'Comic Sans MS', cursive;
+  font-family: 'League Spartan';
   text-align: center;
 }
 hr {
   border: 5px solid #00c2cb;
 }
 table {
-  font-family: 'Comic Sans MS', cursive;
+  font-family: 'League Spartan';
   border-collapse: collapse;
   width: 57%;
   background-color: #89CFF0;
@@ -47,7 +47,7 @@ tr:nth-child(even) {
   font-size: 13px;
   margin: 4px 2px;
   cursor: pointer;
-  font-family: 'Comic Sans MS', cursive;
+  font-family: 'League Spartan';
   border: 1px solid black;
 }
 .button:hover {
@@ -58,7 +58,7 @@ a {
   text-decoration: none;
   color: black;
   text-align: center;
-  font-family: 'Comic Sans MS', cursive;
+  font-family: 'League Spartan';
 }
 a:hover {
   color: #0b8f96;
@@ -73,7 +73,7 @@ input[type=button] {
   font-size: 13px;
   margin: 4px 2px;
   cursor: pointer;
-  font-family: 'Comic Sans MS', cursive;
+  font-family: 'League Spartan';
   border: 1px solid black;
   font-weight: bold;
 }
