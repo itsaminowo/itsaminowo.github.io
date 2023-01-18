@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JXB1TPXT9H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JXB1TPXT9H');
+</script>
+<title>FindOut Search / (keem star) /keemstaryt/</title>
+<link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/itsaminowo/findoutsearch/main/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/itsaminowo/findoutsearch/main/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/itsaminowo/findoutsearch/main/favicon-16x16.png">
+<link rel="manifest" href="https://raw.githubusercontent.com/itsaminowo/findoutsearch/main/site.webmanifestt">
+<meta name="theme-color" content="#00c2cb" />
+<meta charset="UTF-8">
+<body onload="checkEdits()">
+<script>
+function checkEdits() {
+
+if(localStorage.userEdits!=null)
+document.getElementById("edit").innerHTML = localStorage.userEdits;
+}
+function saveEdits() {
+
+var editElem = document.getElementById("edit");
+
+var userVersion = editElem.innerHTML;
+
+localStorage.userEdits = userVersion;
+
+document.getElementById("update").innerHTML="your notations have been <b>saved.</b>";
+
+}
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="https://itsaminowo.github.io/findoutsearch/" class="button"><b>back</b></a>
+
+<h1><b><i>(keem star)</i> /keemstaryt/</b></h1>
+<p style="text-align:center;"><input type="button" value="save my notations on all pages" onclick="saveEdits()"/></p>
+<table style="margin-left:auto;margin-right:auto;">
+  <tr>
+    <th><i>Who is 'keem star'?</th></i>
+  </tr>
+  <tr>
+    <td>Daniel M. Keem, known online as Keemstar, is an American YouTuber, podcaster, and streamer. He is best known for being the host of the Internet popular culture news show DramaAlert. (Refer to 'Youtubers' for a definition). (Description from Wikipedia) <b>/keemstaryt/</b></td>
+  </tr>
+ </table>
+ <br>
+  <table style="margin-left:auto;margin-right:auto;">
+  <tr>
+    <th><i>Notation Board</th></i>
+  </tr>
+  <tr>
+    <td id="edit" contenteditable="true">/keemstaryt/ notations:</td>
+  </tr>
+	<td id="update">this notation board can only be edited by you. <b>notations will save on all boards.</b></td>
+ </table>
+<br>
+<table style="margin-left:auto;margin-right:auto;">
+  <tr>
+    <th><i>Key</th></i>
+  </tr> 
+  <tr>
+    <td><b>/tag/</b> &#8592; this is a tag. tags are bold and in slashes. <b>/fstag/</b></td>
+  </tr>
+  <tr>
+   <td>subtopic  &#8592; this is a subtopic. subtopics come before a tag. subtopics can be in perenthesis if it is on its own page. <b>/fssubtopic/</b></td>
+  </tr>
+  <tr>
+   <td><i><b>Topic</i></b>  &#8592; this is a topic. topics are italic and bold. they are at the top of a table or page. topics can be in perenthesis if it is on its own page. <b>/fstopic/</b></td>
+  </tr>
+  <tr>
+   <td><i><b>What/Who...</i></b>  &#8592; this is a definition/description. definitions/descriptions are italic and bold. they are used to define or describe a topic or subtopic. <b>/fsdefinition/</b></td>
+  </tr>
+ </table>
+<h6><a href="https://itsaminowo.github.io/findoutsearch/fsprivacy.html">Privacy Policy</a> &#x2022; <a href="https://itsaminowo.github.io/findoutsearch/fssource.html">Sources</a></h6>
+ <h6>Copyright © <script>document.write(new Date().getFullYear())</script> FindOut Search. All rights reserved.</h6>
+</body>
+</html>
