@@ -1,4 +1,6 @@
 THE CONTENT IN THIS REPOSITORY MAY NOT BE COPIED OR USED WITHOUT PERMISSION.
-FINDOUT SEARCH'S PRIVACY POLICY IS AVAILABLE @ https://itsaminowo.github.io/findoutsearch/fsprivacy.html
+
+• FINDOUT SEARCH'S PRIVACY POLICY IS AVAILABLE @ https://itsaminowo.github.io/findoutsearch/fsprivacy.html
+• FINDOUT SEARCH'S SOURCES PAGE IS AVAILABLE @ https://itsaminowo.github.io/findoutsearch/fssource.html
 
 COPYRIGHT © 2023 FINDOUT SEARCH. ALL RIGHTS RESERVED.
