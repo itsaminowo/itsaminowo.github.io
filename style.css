@@ -17,6 +17,7 @@ table {
   background-color: #89CFF0;
   border-radius: 1em;
   overflow: hidden;
+  border: 2px solid black;
 }
 td, th {
   text-align: left;
