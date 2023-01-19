@@ -22,9 +22,14 @@ td, th {
   text-align: left;
   padding: 8px;
   color: black;
+  border: 1px solid black
+  border-bottom-right-radius: 1em;
+  border-bottom-left-radius: 1em;
 }
 tr:nth-child(even) {
   background-color: #00c2cb;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
 }
 ::-webkit-scrollbar {
   width: 15px;
@@ -50,6 +55,7 @@ tr:nth-child(even) {
   cursor: pointer;
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 1em;
+  border: 1px solid black
 }
 .button:hover {
   background: #0b8f96;
@@ -76,6 +82,7 @@ input[type=button] {
   cursor: pointer;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
+  border: 1px solid black
   border-radius: 1em;
 }
 input[type=button]:hover {
@@ -86,4 +93,5 @@ input[type=button]:hover {
     height: 70px;
     object-fit: cover;
     border-radius: 1em;
+    border: 1px solid black
 }
