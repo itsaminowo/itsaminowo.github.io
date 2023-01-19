@@ -17,12 +17,12 @@ table {
   background-color: #89CFF0;
   border-radius: 1em;
   overflow: hidden;
-  border: 2px solid black;
 }
 td, th {
   text-align: left;
   padding: 8px;
   color: black;
+  border-bottom: 2px solid #89CFF0;
 }
 tr:nth-child(even) {
   background-color: #00c2cb;
