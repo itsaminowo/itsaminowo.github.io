@@ -16,19 +16,12 @@ table {
   width: 57%;
   background-color: #89CFF0;
   border: 1px solid black
-  border-radius: 1em; 
-  border-spacing: 0;
 }
 td, th {
   text-align: left;
   padding: 8px;
   color: black;
   border: 1px solid black
-  border-radius: 1em; 
-  border-bottom: 1px solid black;
-}
-table tr:last-child td {
-  border-bottom: none;
 }
 tr:nth-child(even) {
   background-color: #00c2cb;
