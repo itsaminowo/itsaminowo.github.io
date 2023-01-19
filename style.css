@@ -87,3 +87,5 @@ input[type=button]:hover {
     object-fit: cover;
     border: 1px solid black
 }
+#edit {
+    border: 1px solid black
