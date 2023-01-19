@@ -19,7 +19,6 @@ table {
   overflow: hidden;
 }
 td, th {
-  border-bottom: 2px solid black; 
   text-align: left;
   padding: 8px;
   color: black;
