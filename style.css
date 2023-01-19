@@ -22,6 +22,8 @@ td, th {
   padding: 8px;
   color: black;
   border: 1px solid black
+}
+tr:nth-child(even) {
   background-color: #00c2cb;
 }
 ::-webkit-scrollbar {
