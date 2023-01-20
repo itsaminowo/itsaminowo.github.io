@@ -12,18 +12,40 @@ hr {
 }
 table {
   font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
   width: 57%;
   background-color: #89CFF0;
+  border-radius: 10px;
+  --border: 1px solid black;
+  border-spacing: 0;
+  border-collapse: separate;
+  border: var(--border);
+  overflow: hidden;
+}
+
+table th:not(:last-child),
+table td:not(:last-child) {
+ border-right: 1px solid black;
+}
+table>thead>tr:not(:last-child)>th,
+table>thead>tr:not(:last-child)>td,
+table>tbody>tr:not(:last-child)>th,
+table>tbody>tr:not(:last-child)>td,
+table>tfoot>tr:not(:last-child)>th,
+table>tfoot>tr:not(:last-child)>td,
+table>tr:not(:last-child)>td,
+table>tr:not(:last-child)>th,
+table>thead:not(:last-child),
+table>tbody:not(:last-child),
+table>tfoot:not(:last-child) {
+ border-bottom: 1px solid black;
+}
+tr:nth-child(even) {
+  background-color: #00c2cb;
 }
 td, th {
   text-align: left;
   padding: 8px;
   color: black;
-  border: 1px solid black
-}
-tr:nth-child(even) {
-  background-color: #00c2cb;
 }
 ::-webkit-scrollbar {
   width: 15px;
