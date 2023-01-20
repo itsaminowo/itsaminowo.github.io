@@ -28,6 +28,7 @@ table {
   border-collapse: separate;
   border: var(--border);
   overflow: hidden;
+  word-break: break-word;
 }
 
 table th:not(:last-child),
