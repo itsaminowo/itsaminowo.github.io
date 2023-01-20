@@ -18,7 +18,6 @@ table {
   --border: 1px solid black;
   border-spacing: 0;
   border-collapse: separate;
-  border: var(--border);
   overflow: hidden;
 }
 
@@ -38,23 +37,6 @@ table>thead:not(:last-child),
 table>tbody:not(:last-child),
 table>tfoot:not(:last-child) {
  border-bottom: 1px solid black;
-}
-table th:not(:last-child),
-table td:not(:last-child) {
- border-right: var(--border);
-}
-table>thead>tr:not(:last-child)>th,
-table>thead>tr:not(:last-child)>td,
-table>tbody>tr:not(:last-child)>th,
-table>tbody>tr:not(:last-child)>td,
-table>tfoot>tr:not(:last-child)>th,
-table>tfoot>tr:not(:last-child)>td,
-table>tr:not(:last-child)>td,
-table>tr:not(:last-child)>th,
-table>thead:not(:last-child),
-table>tbody:not(:last-child),
-table>tfoot:not(:last-child) {
- border-bottom: var(--border);
 }
 tr:nth-child(even) {
   background-color: #00c2cb;
