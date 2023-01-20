@@ -7,6 +7,14 @@ h1, h2, h3, h4, h5, h6, p, div {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
+::-moz-selection {
+  color: white;
+  background: #0b8f96;
+}
+::selection {
+  color: white;
+  background: #0b8f96;
+}
 hr {
   border: 5px solid #00c2cb;
 }
