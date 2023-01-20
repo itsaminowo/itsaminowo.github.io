@@ -111,3 +111,6 @@ input[type=button]:hover {
     border-radius: 5px;
     border: 1px solid black
 }
+[contenteditable] {
+  outline: 0px solid transparent;
+}
