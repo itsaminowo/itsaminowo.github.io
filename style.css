@@ -119,6 +119,7 @@ input[type=button]:hover {
     object-fit: cover;
     border-radius: 5px;
     border: 1px solid black
+    word-break: break-word;
 }
 [contenteditable] {
   outline: 0px solid transparent;
