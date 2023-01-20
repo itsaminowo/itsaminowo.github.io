@@ -10,25 +10,17 @@ h1, h2, h3, h4, h5, h6, p, div {
 hr {
   border: 5px solid #00c2cb;
 }
-table { 
+table {
   font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
   width: 57%;
   background-color: #89CFF0;
-  border: 1px solid black;
-  border-radius: 13px; 
-  border-spacing: 0;
-  }
-td, th { 
-  border-bottom: 1px solid black;
+}
+td, th {
   text-align: left;
   padding: 8px;
   color: black;
-  }
-table tr:last-child > td {
-  border-bottom: none;
-}
-tr:nth-child(even) {
-  background-color: #00c2cb;
+  border: 1px solid black
 }
 tr:nth-child(even) {
   background-color: #00c2cb;
