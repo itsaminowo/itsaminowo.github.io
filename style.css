@@ -36,6 +36,8 @@ table>tr:not(:last-child)>td,
 table>tr:not(:last-child)>th,
 table>thead:not(:last-child),
 table>tbody:not(:last-child),
+table>tfoot:not(:last-child) {
+ border-bottom: 1px solid black;
 }
 tr:nth-child(even) {
   background-color: #00c2cb;
