@@ -108,6 +108,6 @@ input[type=button]:hover {
     width: 525;
     height: 70px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid black
 }
