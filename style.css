@@ -114,7 +114,6 @@ input[type=button]:hover {
   background: #0b8f96;
 }
 .cropad {
-    width: 525px;
     height: 70px;
     max-width: 525px;
     object-fit: cover;
