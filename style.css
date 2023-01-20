@@ -114,13 +114,11 @@ input[type=button]:hover {
   background: #0b8f96;
 }
 .cropad {
-    width: 525;
+    width: 525px;
     height: 70px;
     object-fit: cover;
     border-radius: 5px;
     border: 1px solid black
-    max-inline-size: 100%;
-    block-size: auto;
 }
 [contenteditable] {
   outline: 0px solid transparent;
