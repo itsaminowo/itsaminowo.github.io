@@ -116,10 +116,10 @@ input[type=button]:hover {
 .cropad {
     width: 525px;
     height: 70px;
+    max-width: 525px;
     object-fit: cover;
     border-radius: 5px;
     border: 1px solid black
-    max-width: auto;
 }
 [contenteditable] {
   outline: 0px solid transparent;
