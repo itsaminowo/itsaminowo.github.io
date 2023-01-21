@@ -53,7 +53,7 @@ tr:nth-child(even) {
 }
 td, th {
   text-align: left;
-  padding: 5px;
+  padding: 8px;
   color: black;
 }
 ::-webkit-scrollbar {
