@@ -29,6 +29,9 @@ table {
   border: var(--border);
   overflow: hidden;
   word-break: break-word;
+  -moz-box-shadow: 10px 10px 5px #888;
+  -webkit-box-shadow: 10px 10px 5px #888;
+  box-shadow: 10px 10px 5px #888;
 }
 
 table th:not(:last-child),
