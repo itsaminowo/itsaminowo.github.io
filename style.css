@@ -22,7 +22,7 @@ table {
   font-family: Arial, Helvetica, sans-serif;
   width: 57%;
   background-color: #89CFF0;
-  border-radius: 8px;
+  border-radius: 5px;
   --border: 1px solid black;
   border-spacing: 0;
   border-collapse: separate;
@@ -53,7 +53,7 @@ tr:nth-child(even) {
 }
 td, th {
   text-align: left;
-  padding: 8px;
+  padding: 5px;
   color: black;
 }
 ::-webkit-scrollbar {
@@ -75,7 +75,7 @@ td, th {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 13px;
+  font-size: 5px;
   margin: 4px 2px;
   cursor: pointer;
   font-family: Arial, Helvetica, sans-serif;
@@ -107,7 +107,7 @@ input[type=button] {
   cursor: pointer;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: 5px;
   border: 1px solid black
 }
 input[type=button]:hover {
