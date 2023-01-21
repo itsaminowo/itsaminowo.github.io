@@ -29,9 +29,9 @@ table {
   border: var(--border);
   overflow: hidden;
   word-break: break-word;
-  -moz-box-shadow: 10px 10px 5px #888;
-  -webkit-box-shadow: 10px 10px 5px #888;
-  box-shadow: 10px 10px 5px #888;
+  -moz-box-shadow: 10px 10px 5px black;
+  -webkit-box-shadow: 10px 10px 5px black;
+  box-shadow: 10px 10px 5px black;
 }
 
 table th:not(:last-child),
@@ -84,6 +84,9 @@ td, th {
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 5px;
   border: 1px solid black
+  -moz-box-shadow: 10px 10px 5px black;
+  -webkit-box-shadow: 10px 10px 5px black;
+  box-shadow: 10px 10px 5px black;
 }
 .button:hover {
   background: #0b8f96;
@@ -112,6 +115,9 @@ input[type=button] {
   font-weight: bold;
   border-radius: 5px;
   border: 1px solid black
+  -moz-box-shadow: 10px 10px 5px black;
+  -webkit-box-shadow: 10px 10px 5px black;
+  box-shadow: 10px 10px 5px black;
 }
 input[type=button]:hover {
   background: #0b8f96;
@@ -122,6 +128,9 @@ input[type=button]:hover {
     object-fit: cover;
     border-radius: 5px;
     border: 1px solid black
+   -moz-box-shadow: 10px 10px 5px black;
+   -webkit-box-shadow: 10px 10px 5px black;
+   box-shadow: 10px 10px 5px black;
 }
 [contenteditable] {
   outline: 0px solid transparent;
