@@ -29,9 +29,9 @@ table {
   border: var(--border);
   overflow: hidden;
   word-break: break-word;
-  -moz-box-shadow: 10px 10px 5px #d3d3d3;
-  -webkit-box-shadow: 10px 10px 5px #d3d3d3;
-  box-shadow: 10px 10px 5px #d3d3d3;
+  -moz-box-shadow: 10px 10px 5px #00c2cb;
+  -webkit-box-shadow: 10px 10px 5px #00c2cb;
+  box-shadow: 10px 10px 5px #00c2cb;
 }
 
 table th:not(:last-child),
@@ -83,9 +83,9 @@ td, th {
   cursor: pointer;
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 5px;
-  -moz-box-shadow: 10px 10px 5px #d3d3d3;
-  -webkit-box-shadow: 10px 10px 5px #d3d3d3;
-  box-shadow: 10px 10px 5px #d3d3d3;
+  -moz-box-shadow: 10px 10px 5px #00c2cb;
+  -webkit-box-shadow: 10px 10px 5px #00c2cb;
+  box-shadow: 10px 10px 5px #00c2cb;
   border: 1px solid black
 }
 .button:hover {
@@ -114,9 +114,9 @@ input[type=button] {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   border-radius: 5px;
-  -moz-box-shadow: 10px 10px 5px #d3d3d3;
-  -webkit-box-shadow: 10px 10px 5px #d3d3d3;
-  box-shadow: 10px 10px 5px #d3d3d3;
+  -moz-box-shadow: 10px 10px 5px #00c2cb;
+  -webkit-box-shadow: 10px 10px 5px #00c2cb;
+  box-shadow: 10px 10px 5px #00c2cb;
   border: 1px solid black
 }
 input[type=button]:hover {
@@ -127,9 +127,9 @@ input[type=button]:hover {
     width: 57%;
     object-fit: cover;
     border-radius: 5px;
-    -moz-box-shadow: 10px 10px 5px #d3d3d3;
-    -webkit-box-shadow: 10px 10px 5px #d3d3d3;
-    box-shadow: 10px 10px 5px #d3d3d3;
+    -moz-box-shadow: 10px 10px 5px #00c2cb;
+    -webkit-box-shadow: 10px 10px 5px #00c2cb;
+    box-shadow: 10px 10px 5px #00c2cb;
     border: 1px solid black
 }
 [contenteditable] {
