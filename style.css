@@ -126,7 +126,6 @@ input[type=button]:hover {
     height: 70px;
     width: 57%;
     object-fit: cover;
-    border-radius: 5px;
     -moz-box-shadow: 10px 10px 5px #0b8f96;
     -webkit-box-shadow: 10px 10px 5px #0b8f96;
     box-shadow: 10px 10px 5px #0b8f96;
