@@ -122,6 +122,12 @@ input[type=button] {
 input[type=button]:hover {
   background: #0b8f96;
 }
+.cropad {
+    height: 70px;
+    width: 57%;
+    object-fit: cover;
+    border: 1px solid black
+}
 [contenteditable] {
   outline: 0px solid transparent;
 }
