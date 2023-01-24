@@ -8,15 +8,12 @@
 <link rel="manifest" href="https://raw.githubusercontent.com/itsaminowo/findoutsearch/main/site.webmanifest">
 <meta name="theme-color" content="#00c2cb" />
 <meta charset="UTF-8">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="captcha.css">
 </head>
 <body>
  <h1><b>Welcome.</b>
    <h4>To continue, we'll have to verify that you're human. Please complete the CAPTCHA below!</h4>
        <div class="center">
-        <h1 id="captchaHeading">
-            Captcha Validator Using HTML, CSS and JavaScript
-        </h1>
         <div id="captchaBackground">
             <canvas id="captcha">captcha text</canvas>
             <input id="textBox" type="text" name="text">
@@ -76,10 +73,10 @@ userText.addEventListener('keyup', function(e) {
 submitButton.addEventListener('click', function() {
     if (userText.value === c) {
         output.classList.add("correctCaptcha");
-        output.innerHTML = "Correct!";
+        output.innerHTML = "CAPTCHA validated. Click here to enter FindOut Search.";
     } else {
         output.classList.add("incorrectCaptcha");
-        output.innerHTML = "Incorrect, please try again";
+        output.innerHTML = "CAPTCHA invalid. Please try again.";
     }
 });
 
