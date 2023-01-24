@@ -28,10 +28,7 @@
 // document.querySelector() is used to select an element from the document using its ID
 let captchaText = document.querySelector('#captcha');
 var ctx = captchaText.getContext("2d");
-ctx.font = "30px Arial";
-ctx.fillStyle = "black";
-
-
+     
 let userText = document.querySelector('#textBox');
 let submitButton = document.querySelector('#submitButton');
 let output = document.querySelector('#output');
@@ -73,7 +70,7 @@ userText.addEventListener('keyup', function(e) {
 submitButton.addEventListener('click', function() {
     if (userText.value === c) {
         output.classList.add("correctCaptcha");
-        output.innerHTML = "<br>CAPTCHA validated. Click here to enter FindOut Search.";
+        output.innerHTML = "<br>CAPTCHA validated. <a href="https://itsaminowo.github.io/findoutsearch">Click here</a> to enter FindOut Search.";
     } else {
         output.classList.add("incorrectCaptcha");
         output.innerHTML = "<br>CAPTCHA invalid. Please try again.";
