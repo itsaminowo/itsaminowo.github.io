@@ -50,16 +50,13 @@ table>tbody:not(:last-child),
 table>tfoot:not(:last-child) {
  border-bottom: 1px solid black;
 }
+tr:nth-child(even) {
+  background-color: #00c2cb;
+}
 td {
   text-align: left;
   padding: 8px;
   color: black;
-}
-th {
-  text-align: left;
-  padding: 8px;
-  color: black;
-  background-color: #00c2cb;
 }
 ::-webkit-scrollbar {
   width: 15px;
