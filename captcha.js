@@ -32,24 +32,22 @@ userText.addEventListener('keyup', function(e) {
     if (e.keyCode === 13) {
         if (userText.value === c) {
             output.classList.add("correctCaptcha");
-            output.innerHTML = "Correct!";
+            output.innerHTML = "<br>CAPTCHA validated. Please <a href="https://itsaminowo.github.io/findoutsearch>click here</a> to visit FindOut Search.";
         } else {
             output.classList.add("incorrectCaptcha");
-            output.innerHTML = "Incorrect, please try again";
+            output.innerHTML = "<br>CAPTCHA invalid. Please try again.";
         }
     }
 });
 
-// This event listener is stimulated whenever the user clicks the "Submit" button
-// "Correct!" or "Incorrect, please try again" message is
 // displayed after validating the input text with CAPTCHA
 submitButton.addEventListener('click', function() {
     if (userText.value === c) {
         output.classList.add("correctCaptcha");
-        output.innerHTML = "Correct!";
+        output.innerHTML = "<br>CAPTCHA validated. Please <a href="https://itsaminowo.github.io/findoutsearch>click here</a> to visit FindOut Search.";
     } else {
         output.classList.add("incorrectCaptcha");
-        output.innerHTML = "Incorrect, please try again";
+        output.innerHTML = "<br>CAPTCHA invalid. Please try again.";
     }
 });
 
