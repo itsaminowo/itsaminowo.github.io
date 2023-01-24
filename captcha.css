@@ -135,6 +135,8 @@ a:hover {
     height: 25px;
     border-radius: 5px;
     border: 1px solid black
+    margin: auto;
+    display: block;
 }
 input[type="text"], textarea {
   background-color : #89CFF0; 
