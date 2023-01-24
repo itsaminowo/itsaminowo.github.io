@@ -55,7 +55,7 @@ a {
 a:hover {
   color: #0b8f96;
 }
-input[type=submit] {
+#submitButton {
   background-color: #00c2cb;
   color: black;
   padding: 10px 22px;
@@ -72,7 +72,7 @@ input[type=submit] {
   box-shadow: 10px 10px 5px #0b8f96;
   border: 1px solid black
 }
-input[type=submit]:hover {
+#submitButton:hover {
   background: #0b8f96;
 }
 .alert {
