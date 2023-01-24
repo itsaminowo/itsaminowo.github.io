@@ -15,49 +15,6 @@ h1, h2, h3, h4, h5, h6, p, div {
   color: white;
   background: #0b8f96;
 }
-hr {
-  border: 5px solid #00c2cb;
-}
-table {
-  width: 57%;
-  background-color: #89CFF0;
-  border-radius: 5px;
-  --border: 1px solid black;
-  border-spacing: 0;
-  border-collapse: separate;
-  border: var(--border);
-  overflow: hidden;
-  word-break: break-word;
-  -moz-box-shadow: 10px 10px 5px #0b8f96;
-  -webkit-box-shadow: 10px 10px 5px #0b8f96;
-  box-shadow: 10px 10px 5px #0b8f96;
-}
-
-table th:not(:last-child),
-table td:not(:last-child) {
- border-right: 1px solid black;
-}
-table>thead>tr:not(:last-child)>th,
-table>thead>tr:not(:last-child)>td,
-table>tbody>tr:not(:last-child)>th,
-table>tbody>tr:not(:last-child)>td,
-table>tfoot>tr:not(:last-child)>th,
-table>tfoot>tr:not(:last-child)>td,
-table>tr:not(:last-child)>td,
-table>tr:not(:last-child)>th,
-table>thead:not(:last-child),
-table>tbody:not(:last-child),
-table>tfoot:not(:last-child) {
- border-bottom: 1px solid black;
-}
-tr:nth-child(even) {
-  background-color: #00c2cb;
-}
-td, th {
-  text-align: left;
-  padding: 8px;
-  color: black;
-}
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -98,7 +55,7 @@ a {
 a:hover {
   color: #0b8f96;
 }
-input[type=button] {
+input[type=submit] {
   background-color: #00c2cb;
   color: black;
   padding: 10px 22px;
@@ -115,11 +72,8 @@ input[type=button] {
   box-shadow: 10px 10px 5px #0b8f96;
   border: 1px solid black
 }
-input[type=button]:hover {
+input[type=submit]:hover {
   background: #0b8f96;
-}
-[contenteditable] {
-  outline: 0px solid transparent;
 }
 .alert {
   margin: auto;
@@ -179,29 +133,12 @@ input[type=button]:hover {
     flex-direction: column;
     align-items: center;
 }
-
-#submitButton {
-    margin-top: 2em;
-    margin-bottom: 2em;
-    background-color: #08e5ff;
-    border: 0px;
-    font-weight: bold;
-}
-
-#refreshButton {
-    background-color: #08e5ff;
-    border: 0px;
-    font-weight: bold;
-}
-
 #textBox {
     height: 25px;
 }
-
 .incorrectCaptcha {
     color: #FF0000;
 }
-
 .correctCaptcha {
     color: #7FFF00;
 }
