@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6, p, div {
 ::-webkit-scrollbar-thumb:hover {
   background: #0b8f96; 
 }
-.button {
+#refreshButton {
   background-color: #00c2cb;
   color: black;
   padding: 10px 22px;
@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6, p, div {
   box-shadow: 10px 10px 5px #0b8f96;
   border: 1px solid black
 }
-.button:hover {
+#refreshButton:hover {
   background: #0b8f96;
   color: black;
 }
