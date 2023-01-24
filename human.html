@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="captcha.css">
 </head>
 <body>
- <h1><b>Welcome.</b>
+ <h1><b>Welcome.</b></h1>
    <h4>To continue, we'll have to verify that you're human. Please complete the CAPTCHA below!</h4>
        <div class="center">
         <div id="captchaBackground">
@@ -28,8 +28,8 @@
 // document.querySelector() is used to select an element from the document using its ID
 let captchaText = document.querySelector('#captcha');
 var ctx = captchaText.getContext("2d");
-ctx.font = "30px Roboto";
-ctx.fillStyle = "#08e5ff";
+ctx.font = "30px Arial";
+ctx.fillStyle = "black";
 
 
 let userText = document.querySelector('#textBox');
@@ -59,10 +59,10 @@ userText.addEventListener('keyup', function(e) {
     if (e.keyCode === 13) {
         if (userText.value === c) {
             output.classList.add("correctCaptcha");
-            output.innerHTML = "CAPTCHA validated. Click here to enter FindOut Search.";
+            output.innerHTML = "<br>CAPTCHA validated. Click here to enter FindOut Search.";
         } else {
             output.classList.add("incorrectCaptcha");
-            output.innerHTML = "CAPTCHA invalid. Please try again.";
+            output.innerHTML = "<br>CAPTCHA invalid. Please try again.";
         }
     }
 });
@@ -73,10 +73,10 @@ userText.addEventListener('keyup', function(e) {
 submitButton.addEventListener('click', function() {
     if (userText.value === c) {
         output.classList.add("correctCaptcha");
-        output.innerHTML = "CAPTCHA validated. Click here to enter FindOut Search.";
+        output.innerHTML = "<br>CAPTCHA validated. Click here to enter FindOut Search.";
     } else {
         output.classList.add("incorrectCaptcha");
-        output.innerHTML = "CAPTCHA invalid. Please try again.";
+        output.innerHTML = "<br>CAPTCHA invalid. Please try again.";
     }
 });
 
