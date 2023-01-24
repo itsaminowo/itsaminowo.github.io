@@ -12,18 +12,22 @@
 </head>
 <body>
  <h1><b>Welcome.</b></h1>
-   <h4>To continue, we'll have to verify that you're human. Please complete the CAPTCHA below!</h4>
-       <div style="text-align: center;">
-        <div id="captchaBackground">
-            <canvas id="captcha">captcha text</canvas>
-            <input id="textBox" type="text" name="text">
-            <div id="buttons">
-                <input id="submitButton" type="submit">
-                <button id="refreshButton" type="submit">Refresh</button>
-            </div>
-            <span id="output"></span>
-        </div>
-    </div>
+   <h4>To continue, we'll have to verify that you're human. Please complete the CAPTCHA below to enter FindOut Search.</h4>
+<body onload="generate()">
+    <div id="user-input" class="inline">
+        <input type="text" id="submit"
+            placeholder="Captcha code" />
+    </div>
+ 
+    <div class="inline" onclick="generate()">
+        <i class="fas fa-sync"></i>
+    </div>
+ 
+    <div id="image" class="inline" selectable="False">
+    </div>
+    <input type="submit" id="btn" onclick="printmsg()" />
+ 
+    <p id="key"></p>
  <script src="captcha.js"></script>
 <h6>Copyright © <script>document.write(new Date().getFullYear())</script> FindOut Search. All rights reserved.</h6>
 </body>
