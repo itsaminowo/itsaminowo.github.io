@@ -27,51 +27,12 @@ h1, h2, h3, h4, h5, h6, p, div {
 ::-webkit-scrollbar-thumb:hover {
   background: #0b8f96; 
 }
-#refreshButton {
-  background-color: #00c2cb;
-  color: black;
-  padding: 10px 22px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 13px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 5px;
-  -moz-box-shadow: 10px 10px 5px #0b8f96;
-  -webkit-box-shadow: 10px 10px 5px #0b8f96;
-  box-shadow: 10px 10px 5px #0b8f96;
-  border: 1px solid black
-}
-#refreshButton:hover {
-  background: #0b8f96;
-}
-a {
   text-decoration: none;
   color: black;
   text-align: center;
 }
 a:hover {
   color: #0b8f96;
-}
-#submitButton {
-   background-color: #00c2cb;
-  color: black;
-  padding: 10px 22px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 13px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 5px;
-  -moz-box-shadow: 10px 10px 5px #0b8f96;
-  -webkit-box-shadow: 10px 10px 5px #0b8f96;
-  box-shadow: 10px 10px 5px #0b8f96;
-  border: 1px solid black
-}
-#submitButton:hover {
-  background: #0b8f96;
 }
 .alert {
   margin: auto;
@@ -109,9 +70,9 @@ a:hover {
     height: 40px;
     user-select: none;
     text-decoration:line-through;
-    font-style: italic;
-    font-size: x-large;
-    border: red 2px solid;
+    font-style: bold;
+    font-size: 15px;
+    border: 1 solid black;
     margin-left: 10px;
      
 }
