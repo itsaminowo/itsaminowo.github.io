@@ -130,5 +130,10 @@ a:hover {
 }
 input[type="text"], textarea {
   background-color : #89CFF0; 
-
+}
+#incorrectCaptcha {
+  text-align: center;
+}
+#correctCaptcha {
+  text-align: center;
 }
