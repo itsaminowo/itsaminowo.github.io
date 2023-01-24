@@ -53,7 +53,7 @@ table>tfoot:not(:last-child) {
 tr:nth-child(even) {
   background-color: #00c2cb;
 }
-td {
+td, th {
   text-align: left;
   padding: 8px;
   color: black;
