@@ -15,13 +15,13 @@
               var string1 = removeSpaces(document.getElementById('mainCaptcha').value);
               var string2 = removeSpaces(document.getElementById('txtInput').value);
               if (string1 == string2){
-         document.getElementById('success').innerHTML = "Form is validated Successfully";
-         //alert("Form is validated Successfully");
+         document.getElementById('success').innerHTML = "CAPTCHA validated. To enter FindOut Search, <a href="https://itsaminowo.github.io/findoutsearch">click here</a>.";
+         //alert("CAPTCHA validated.");
                 return true;
               }
               else{       
-         document.getElementById('error').innerHTML = "Please enter a valid captcha."; 
-         //alert("Please enter a valid captcha.");
+         document.getElementById('error').innerHTML = "CAPTCHA invalid. Please try again."; 
+         //alert("CAPTCHA invalid.");
                 return false;
          
               }
