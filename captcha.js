@@ -12,6 +12,9 @@
               }
             var code = a + '' + b + '' + c + '' + d + '' + e + '' + f;
             document.getElementById("mainCaptcha").value = code
+            var inp = document.getElementById('mainCaptcha');
+            inp.addEventListener('select', function() {
+            this.selectionStart = this.selectionEnd;}, false); 
           }
           function CheckValidCaptcha(){
               var string1 = removeSpaces(document.getElementById('mainCaptcha').value);
@@ -25,16 +28,7 @@
          document.getElementById('invalid').innerHTML = "CAPTCHA invalid. Please try again."; 
          //alert("CAPTCHA invalid.");
                 return false;
-         
               }
-              var inp = document.getElementById('mainCaptcha');
-          inp.addEventListener('select', function() {
-          this.selectionStart = this.selectionEnd;}, false);
-          }
-              var inp = document.getElementById('textInput');
-          inp.addEventListener('select', function() {
-          this.selectionStart = this.selectionEnd;}, false);
-          }
           function removeSpaces(string){
             return string.split(' ').join('');
           }
