@@ -26,6 +26,7 @@
          //alert("CAPTCHA invalid.");
                 return false;
               }
+          }
           function removeSpaces(string){
             return string.split(' ').join('');
           }
