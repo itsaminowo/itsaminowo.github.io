@@ -7,8 +7,10 @@
                var b = alpha[Math.floor(Math.random() * alpha.length)];
                var c = alpha[Math.floor(Math.random() * alpha.length)];
                var d = alpha[Math.floor(Math.random() * alpha.length)];
+               var e = alpha[Math.floor(Math.random() * alpha.length)];
+               var f = alpha[Math.floor(Math.random() * alpha.length)];
               }
-            var code = a + '' + b + '' + '' + c + '' + d;
+            var code = a + '' + b + '' + '' + c + '' + d + '' + e + '' + f;
             document.getElementById("mainCaptcha").value = code
           }
           function CheckValidCaptcha(){
