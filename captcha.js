@@ -16,15 +16,7 @@
           function CheckValidCaptcha(){
               var string1 = removeSpaces(document.getElementById('mainCaptcha').value);
               var string2 = removeSpaces(document.getElementById('txtInput').value);
-              if (string1 == string2)
-             var alpha = new Array('Go to <b>https://itsaminowo.github.io/findoutsearch/authVERIFY$1482fug83945/</b> to enter FindOut Search.','Go to <b>https://itsaminowo.github.io/findoutsearch/authVERIFY$019142132094yv/</b> to enter FindOut Search.','Go to <b>https://itsaminowo.github.io/findoutsearch/authVERIFY$1123421320945x/</b> to enter FindOut Search.');
-             var i;
-             for (i=0;i<1;i++){
-               var a = alpha[Math.floor(Math.random() * alpha.length)];
-               var b = alpha[Math.floor(Math.random() * alpha.length)];
-               var c = alpha[Math.floor(Math.random() * alpha.length)];
-              }
-            var code = a + '' + b + '' + c;
+              if (string1 == string2)}
          document.getElementById('validated').innerHTML = "Go to <b>https://itsaminowo.github.io/findoutsearch/authVERIFY$1123421320945x/</b> to enter FindOut Search.";
          //alert("CAPTCHA validated.");
                 return true;
