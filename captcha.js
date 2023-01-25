@@ -13,8 +13,8 @@ function generate() {
 "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
  
     // Generate captcha for length of
-    // 5 with random character
-    for (let i = 1; i < 5; i++) {
+    // 7 with random character
+    for (let i = 1; i < 7; i++) {
         uniquechar += randomchar.charAt(
             Math.random() * randomchar.length)
     }
@@ -31,12 +31,12 @@ function printmsg() {
     // to generated captcha or not
     if (usr_input == captcha.innerHTML) {
         var s = document.getElementById("key")
-            .innerHTML = "Matched";
+            .innerHTML = "CAPTCHA validated. <a href="https://itsaminowo.github.io/findoutsearch"> Click here</a> to enter FindOut Search.";
         generate();
     }
     else {
         var s = document.getElementById("key")
-            .innerHTML = "not Matched";
+            .innerHTML = "CAPTCHA invalid. Please try again.";
         generate();
     }
 }
