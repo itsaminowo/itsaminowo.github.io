@@ -16,7 +16,7 @@
           function CheckValidCaptcha(){
               var string1 = removeSpaces(document.getElementById('mainCaptcha').value);
               var string2 = removeSpaces(document.getElementById('txtInput').value);
-              if (string1 == string2)}
+              if (string1 == string2){
          document.getElementById('validated').innerHTML = "Go to <b>https://itsaminowo.github.io/findoutsearch/authVERIFY$1123421320945x/</b> to enter FindOut Search.";
          //alert("CAPTCHA validated.");
                 return true;
