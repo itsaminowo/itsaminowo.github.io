@@ -10,7 +10,7 @@
                var e = alpha[Math.floor(Math.random() * alpha.length)];
                var f = alpha[Math.floor(Math.random() * alpha.length)];
               }
-            var code = a + '' + b + '' + '' + c + '' + d + '' + e + '' + f;
+            var code = a + '' + b + '' + c + '' + d + '' + e + '' + f;
             document.getElementById("mainCaptcha").value = code
           }
           function CheckValidCaptcha(){
