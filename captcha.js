@@ -27,6 +27,13 @@
                 return false;
          
               }
+              var inp = document.getElementById('mainCaptcha');
+          inp.addEventListener('select', function() {
+          this.selectionStart = this.selectionEnd;}, false);
+          }
+              var inp = document.getElementById('textInput');
+          inp.addEventListener('select', function() {
+          this.selectionStart = this.selectionEnd;}, false);
           }
           function removeSpaces(string){
             return string.split(' ').join('');
