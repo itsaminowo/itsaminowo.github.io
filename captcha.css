@@ -148,7 +148,6 @@ input[type=button]:hover {
   color: #0b8f96;
 }
 input { 
-  outline: none;
   margin: 10px 0;
   width: 200px; 
   border-radius: 5px;
