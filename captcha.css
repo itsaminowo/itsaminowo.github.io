@@ -15,6 +15,49 @@ h1, h2, h3, h4, h5, h6, p, div {
   color: white;
   background: #0b8f96;
 }
+hr {
+  border: 5px solid #00c2cb;
+}
+table {
+  width: 57%;
+  background-color: #89CFF0;
+  border-radius: 5px;
+  --border: 1px solid black;
+  border-spacing: 0;
+  border-collapse: separate;
+  border: var(--border);
+  overflow: hidden;
+  word-break: break-word;
+  -moz-box-shadow: 10px 10px 5px #0b8f96;
+  -webkit-box-shadow: 10px 10px 5px #0b8f96;
+  box-shadow: 10px 10px 5px #0b8f96;
+}
+
+table th:not(:last-child),
+table td:not(:last-child) {
+ border-right: 1px solid black;
+}
+table>thead>tr:not(:last-child)>th,
+table>thead>tr:not(:last-child)>td,
+table>tbody>tr:not(:last-child)>th,
+table>tbody>tr:not(:last-child)>td,
+table>tfoot>tr:not(:last-child)>th,
+table>tfoot>tr:not(:last-child)>td,
+table>tr:not(:last-child)>td,
+table>tr:not(:last-child)>th,
+table>thead:not(:last-child),
+table>tbody:not(:last-child),
+table>tfoot:not(:last-child) {
+ border-bottom: 1px solid black;
+}
+tr:nth-child(even) {
+  background-color: #00c2cb;
+}
+td, th {
+  text-align: left;
+  padding: 8px;
+  color: black;
+}
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -27,12 +70,56 @@ h1, h2, h3, h4, h5, h6, p, div {
 ::-webkit-scrollbar-thumb:hover {
   background: #0b8f96; 
 }
+.button {
+  background-color: #00c2cb;
+  color: black;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  -moz-box-shadow: 10px 10px 5px #0b8f96;
+  -webkit-box-shadow: 10px 10px 5px #0b8f96;
+  box-shadow: 10px 10px 5px #0b8f96;
+  border: 1px solid black
+}
+.button:hover {
+  background: #0b8f96;
+  color: black;
+}
+a {
   text-decoration: none;
   color: black;
   text-align: center;
 }
 a:hover {
   color: #0b8f96;
+}
+input[type=button] {
+  background-color: #00c2cb;
+  color: black;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  -moz-box-shadow: 10px 10px 5px #0b8f96;
+  -webkit-box-shadow: 10px 10px 5px #0b8f96;
+  box-shadow: 10px 10px 5px #0b8f96;
+  border: 1px solid black
+}
+input[type=button]:hover {
+  background: #0b8f96;
+}
+[contenteditable] {
+  outline: 0px solid transparent;
 }
 .alert {
   margin: auto;
@@ -59,41 +146,4 @@ a:hover {
 
 .closebtn:hover {
   color: #0b8f96;
-}
-#image{
-    margin-top: 10px;
-    box-shadow: 5px 5px 5px 5px gray;
-    width: 60px;;
-    padding: 20px;
-    font-weight: 400;
-    padding-bottom: 0px;
-    height: 40px;
-    user-select: none;
-    text-decoration:line-through;
-    font-style: bold;
-    font-size: 15px;
-    border: 1 solid black;
-    margin-left: 10px;
-     
-}
-#user-input{
-    box-shadow: 5px 5px 5px 5px gray;
-    width:auto;
-       margin-right: 10px;
-    padding: 10px;
-    padding-bottom: 0px;
-    height: 40px;
-       border: red 0px solid;
-}
-input{
-    border:1px black solid;
-}
-.inline{
-    display:inline-block;
-}
-#btn{
-    box-shadow: 5px 5px 5px grey;
-    color: aqua;
-    margin: 10px;
-    background-color: brown;
 }
