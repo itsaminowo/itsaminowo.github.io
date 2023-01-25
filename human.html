@@ -11,21 +11,35 @@
 <link rel="stylesheet" href="captcha.css">
 </head>
 <body>
-<body onload="generate()">
-    <div id="user-input" class="inline">
-        <input type="text" id="submit"
-            placeholder="Captcha code" />
-    </div>
- 
-    <div class="inline" onclick="generate()">
-        <i class="fas fa-sync"></i>
-    </div>
- 
-    <div id="image" class="inline" selectable="False">
-    </div>
-    <input type="submit" id="btn" onclick="printmsg()" />
- 
-    <p id="key"></p>
+  <body onload="generateCaptcha();">
+         <table style="margin-left:auto;margin-right:auto;">
+            <tr>
+               <td>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <input type="text" id="mainCaptcha"readonly="readonly"/> //set background image according to your choice.
+                  <input type="button" id="refresh" value="Refresh" onclick="generateCaptcha();" />
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <input type="text" id="txtInput"/>    
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <input id="Button1" type="button" value="Check" onclick="CheckValidCaptcha();"/>
+               </td>
+            </tr>
+            <tr>
+               <td><span id="error" style="color:red"></span></td>
+            </tr>
+            <tr>
+               <td><span id="success" style="color:green"></span></td>
+            </tr>
+         </table>
  <script src="captcha.js"></script>
 <h6>Copyright © <script>document.write(new Date().getFullYear())</script> FindOut Search. All rights reserved.</h6>
 </body>
