@@ -15,12 +15,12 @@
               var string1 = removeSpaces(document.getElementById('mainCaptcha').value);
               var string2 = removeSpaces(document.getElementById('txtInput').value);
               if (string1 == string2){
-         document.getElementById('success').innerHTML = "CAPTCHA validated.";
+         document.getElementById('validated').innerHTML = "CAPTCHA validated.";
          //alert("CAPTCHA validated.");
                 return true;
               }
               else{       
-         document.getElementById('error').innerHTML = "CAPTCHA invalid. Please try again."; 
+         document.getElementById('invalid').innerHTML = "CAPTCHA invalid. Please try again."; 
          //alert("CAPTCHA invalid.");
                 return false;
          
