@@ -13,8 +13,8 @@ function generate() {
 "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
  
     // Generate captcha for length of
-    // 7 with random character
-    for (let i = 1; i < 7; i++) {
+    // 5 with random character
+    for (let i = 1; i < 5; i++) {
         uniquechar += randomchar.charAt(
             Math.random() * randomchar.length)
     }
