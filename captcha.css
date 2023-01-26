@@ -147,3 +147,13 @@ input[type=button]:hover {
 .closebtn:hover {
   color: #0b8f96;
 }
+
+#mainCaptcha {
+  margin: auto;
+  display: block;
+}
+
+#textInput {
+  margin: auto;
+  display: block;
+}
