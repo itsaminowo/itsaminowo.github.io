@@ -17,12 +17,12 @@ function generateCaptcha()
               var string1 = removeSpaces(document.getElementById('mainCaptcha').value);
               var string2 = removeSpaces(document.getElementById('txtInput').value);
               if (string1 == string2){
-         document.getElementById('validated').innerHTML = "CAPTCHA validated. Please go to <b>https://itsaminowo.github.io/findoutsearch/authVERIFY$1123421320945x.html</b> to enter FindOut Search.";
+         document.getElementById('validated').innerHTML = "&#10003; CAPTCHA validated. Please go to <b>https://itsaminowo.github.io/findoutsearch/authVERIFY$1123421320945x.html</b> to enter FindOut Search.";
          //alert("CAPTCHA validated.");
                 return true;
               }
               else{       
-         document.getElementById('invalid').innerHTML = "CAPTCHA invalid. Please try again. <b>*The CAPTCHA will reload every 60 seconds.</b>"; 
+         document.getElementById('invalid').innerHTML = "&#10761; CAPTCHA invalid. Please try again. <b>*The CAPTCHA will reload every 60 seconds.</b>"; 
          //alert("CAPTCHA invalid.");
                 return false;
               }
