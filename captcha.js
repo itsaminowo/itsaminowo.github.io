@@ -22,7 +22,7 @@ function generateCaptcha()
                 return true;
               }
               else{       
-         document.getElementById('invalid').innerHTML = "CAPTCHA invalid. Please try again. <b>*The CAPTCHA will reload every 32 seconds.</b>"; 
+         document.getElementById('invalid').innerHTML = "CAPTCHA invalid. Please try again. <b>*The CAPTCHA will reload every 60 seconds.</b>"; 
          //alert("CAPTCHA invalid.");
                 return false;
               }
