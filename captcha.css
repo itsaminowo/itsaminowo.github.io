@@ -157,3 +157,13 @@ input[type=button]:hover {
   margin: auto;
   display: block;
 }
+
+#refreshCAPTCHA {
+  margin: auto;
+  display: block;
+}
+
+#validateCAPTCHA {
+  margin: auto;
+  display: block;
+}
