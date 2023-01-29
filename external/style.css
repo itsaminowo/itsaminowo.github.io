@@ -69,5 +69,7 @@ hr {
   border-bottom: none;
   border-top: none;
   outline: 1px solid #ccc;
+  border-right: none;
+  border-left: none;
   width: 100%;
 }
