@@ -12,3 +12,17 @@ function openTopic(evt, topicName) {
   evt.currentTarget.className += " active";
 }
 document.getElementById("opendefualt").click();
+function search_page() {
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('tablinks');
+      
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";                 
+        }
+    }
+}
