@@ -26,3 +26,6 @@ function search_page() {
         }
     }
 }
+    document.getElementById("myButton").onclick = function () {
+        location.href = "https://itsaminowo.github.io/findoutsearch/";
+    };
