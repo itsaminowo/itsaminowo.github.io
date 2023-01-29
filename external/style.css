@@ -61,3 +61,13 @@ hr {
   color: black;
   background: #ddd;
 }
+#searchbar {
+  outline: none;
+  border-radius: 0px;
+  border: 1px solid #ccc;
+  display: block;
+  border-bottom: none;
+  border-top: none;
+  outline: 1px solid #ccc;
+  width: 100%;
+}
