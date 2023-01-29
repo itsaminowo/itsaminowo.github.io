@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>FindOut Search / (404 Page Not Found) /fs404/</title>
-<link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/itsaminowo/findoutsearch/main/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/itsaminowo/findoutsearch/main/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/itsaminowo/findoutsearch/main/favicon-16x16.png">
-<link rel="manifest" href="https://raw.githubusercontent.com/itsaminowo/findoutsearch/main/site.webmanifest">
-<meta name="theme-color" content="#00c2cb" />
+<title>FindOut Search / Page Not Found</title>
+<link rel="apple-touch-icon" sizes="180x180" href="content/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="content/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="content/favicon-16x16.png">
+<link rel="manifest" href="content/site.webmanifest">
+<meta name="theme-color" content="#ccc" />
 <meta charset="UTF-8">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="external/style.css">
 </head>
-<body>
-<div class="alert">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&#10005;</span> 
-You have been redirected to an error page. Please read the notice below for more information.
+<div class="tab">
+  <button class="tablinks" onclick="openTopic(event, '404')" style="float: right;" id="opendefualt">Page Not Found</button></a>
 </div>
-<h1><b><i>(404 Page Not Found)</i> /fs404/</b></h1>
-  
-<table style="margin-left:auto;margin-right:auto;">
-  <tr>
-    <th><i>Why did this happen?</th></i>
-  </tr>
-  <tr>
-       <td>This web page does not exist within FindOut Search or has been moved to a new URL within FindOut Search. Check the URL you entered or go to FindOut Search by <a href="https://itsaminowo.github.io/findoutsearch/">clicking here</a>. <b>/fs404/</b></td>
-</tr>
-<tr>
-<td style="font-size: 125px; text-align: center;"><b>????</b></td>
-  </tr>
- </table>
- <h6><a href="https://itsaminowo.github.io/findoutsearch/">Home</a> &#x2022; <a href="https://itsaminowo.github.io/findoutsearch/fsprivacy.html">Privacy Policy</a> &#x2022; <a href="https://itsaminowo.github.io/findoutsearch/fssource.html">Sources</a></h6>
- <h6>Copyright © <script>document.write(new Date().getFullYear())</script> FindOut Search. All rights reserved.</h6>
+
+<div id="404" class="tabcontent">
+  <h6 title="Internal / Breadcrumb">Internal / [?] <i class="fa-solid fa-question" id="faicon" title="Admin Page / Unavailable"></i></h6>
+  <h3 class="header" title="Internal / [?]">Page Not Found: Error Code 404</h3><p>
+  <hr title="[?] / Divider">
+  <p title="[?] / Error Code"><b>404 Page not found</b></p>
+  <p title="[?] / Error Analysis">&#x2022; This page is non-existent and does not exist within the directory of FindOut Search. Try
+    checking the URL you entered.</p>
+</div>
+
+<div id="footer" title="Copyright Statement" style="text-align: center;">
+
+<h5>The Privacy Policy is available on the right side of the navigation bar.</h5>
+<h5>Copyright &copy; <script>document.write(new Date().getFullYear())</script> FindOut Search. All rights reserved.</h5>
+</div>
+
+<script src="external/script.js"></script>
 </body>
 </html>
