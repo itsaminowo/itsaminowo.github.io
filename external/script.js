@@ -26,9 +26,6 @@ function search_page() {
         }
     }
 }
-    document.getElementById("errorRedirect").onclick = function () {
-        location.href = "https://itsaminowo.github.io/findoutsearch/";
-    };
 window.onload = function() {
       var month = new Array("January", "February", "March", "April", "May", "June", "July",    "August", "September", "October", "November", "December");
       var today = new Date();
