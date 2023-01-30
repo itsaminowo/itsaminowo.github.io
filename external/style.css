@@ -2,8 +2,14 @@ body {
   background-color: white;
   place-items: center;
   font-family: 'Poppins', sans-serif;
-  overflow: hidden;
+  -ms-overflow-style: none;
 }
+body::-webkit-scrollbar{
+    display: none;
+  }
+html {
+    scrollbar-width: none;
+  }
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
