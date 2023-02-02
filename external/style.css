@@ -86,3 +86,11 @@ img {
   -ms-user-select: none;
   user-select: none;
 }
+.banner {
+  height: auto;
+  width: 70%;
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
