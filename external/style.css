@@ -93,6 +93,9 @@ hr {
   height: 27px;
   background-color: #ddd;
 }
+#searchbar:placeholder-shown {
+  text-overflow: ellipsis;
+}
 img {
   -webkit-user-select: none;
   -ms-user-select: none;
