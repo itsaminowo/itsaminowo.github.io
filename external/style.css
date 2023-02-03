@@ -36,6 +36,17 @@ html {
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+  -webkit-animation: tabFade 1s;
+  animation: tabFade 0.3s;
+}
+@-webkit-keyframes tabFade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes tabFade {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 a {
   text-decoration: none;
