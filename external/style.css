@@ -68,6 +68,12 @@ color: #551A8B;
   -moz-text-decoration-color: #ccc;
   text-decoration-thickness: 5px;
 }
+.header:hover {
+  text-decoration: underline;
+  text-decoration-color: #ddd;
+  -moz-text-decoration-color: #ddd;
+  text-decoration-thickness: 5px;
+}
 hr {
   border-top: 1px solid #ccc;
   border: 1px solid #ccc;
