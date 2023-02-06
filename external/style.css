@@ -59,8 +59,6 @@ color: #551A8B;
 .header {
   font-family: "Times New Roman", Times, serif;
   font-size: 32px;
-}
-.header:hover {
   text-decoration: underline;
   text-decoration-color: #ccc;
   -moz-text-decoration-color: #ccc;
