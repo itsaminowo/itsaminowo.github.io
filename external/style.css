@@ -111,3 +111,15 @@ img {
   -ms-user-select: none;
   user-select: none;
 }
+figcaption {
+    background-color: #ccc;
+    padding: 3px;
+    text-align: center;
+}
+figure {
+    border: 1px solid #ccc;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    margin: auto;
+}
