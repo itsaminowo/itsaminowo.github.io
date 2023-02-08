@@ -123,4 +123,6 @@ figure {
     flex-flow: column;
     padding: 5px;
     margin: auto;
+  	margin-left: 3px;
+    margin-bottom: 3px;
 }
