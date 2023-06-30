@@ -56,6 +56,9 @@ a:hover {
 color: #551A8B;
   text-decoration: underline;
 }
+.tablinks {
+  color: black;
+}
 .header {
   font-family: "Times New Roman", Times, serif;
   font-size: 32px;
