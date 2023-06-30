@@ -24,7 +24,6 @@ html {
   padding: 14px 16px;
   transition: 0.2s;
   font-size: 17px;
-  color: black;
 }
 .tab button:hover {
   background-color: #ddd;
