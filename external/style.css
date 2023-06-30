@@ -24,6 +24,7 @@ html {
   padding: 14px 16px;
   transition: 0.2s;
   font-size: 17px;
+  color: black;
 }
 .tab button:hover {
   background-color: #ddd;
@@ -55,9 +56,6 @@ a {
 a:hover {
 color: #551A8B;
   text-decoration: underline;
-}
-.tablinks {
-  color: black;
 }
 .header {
   font-family: "Times New Roman", Times, serif;
