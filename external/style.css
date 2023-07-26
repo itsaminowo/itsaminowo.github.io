@@ -146,13 +146,13 @@ figure {
     margin-bottom: 3px;
 }
 .barbiefigcaption {
-    background-color: #fb9bb9;
+    background-color: #fcb4ca;
     padding: 3px;
     margin-top: 5px;
     text-align: center;
 }
 .barbiefigure {
-    border: 1px solid #fb9bb9;
+    border: 1px solid #fcb4ca;
     display: flex;
     flex-flow: column;
     padding: 5px;
