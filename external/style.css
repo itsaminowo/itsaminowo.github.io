@@ -70,6 +70,21 @@ color: #551A8B;
   -moz-text-decoration-color: #ddd;
   text-decoration-thickness: 5px;
 }
+.barbieheader {
+  color: #f85084;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 32px;
+  text-decoration: underline;
+  text-decoration-color: #fb9bb9;
+  -moz-text-decoration-color: #fb9bb9;
+  text-decoration-thickness: 5px;
+}
+.barbieheader:hover {
+  text-decoration: underline;
+  text-decoration-color: #fcb4ca;
+  -moz-text-decoration-color: #fcb4ca;
+  text-decoration-thickness: 5px;
+}
 hr {
   border-top: 1px solid #ccc;
   border: 1px solid #ccc;
