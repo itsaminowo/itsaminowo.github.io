@@ -70,28 +70,9 @@ color: #551A8B;
   -moz-text-decoration-color: #ddd;
   text-decoration-thickness: 5px;
 }
-.barbieheader {
-  color: #f85084;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 32px;
-  text-decoration: underline;
-  text-decoration-color: #fb9bb9;
-  -moz-text-decoration-color: #fb9bb9;
-  text-decoration-thickness: 5px;
-}
-.barbieheader:hover {
-  text-decoration: underline;
-  text-decoration-color: #fcb4ca;
-  -moz-text-decoration-color: #fcb4ca;
-  text-decoration-thickness: 5px;
-}
 hr {
   border-top: 1px solid #ccc;
   border: 1px solid #ccc;
-}
-.barbiehr {
-  border-top: 1px solid #fb9bb9;
-  border: 1px solid #fb9bb9;
 }
 #faicon {
   font-size: 24px;
@@ -138,21 +119,6 @@ figcaption {
 }
 figure {
     border: 1px solid #ccc;
-    display: flex;
-    flex-flow: column;
-    padding: 5px;
-    margin: auto;
-  	margin-left: 3px;
-    margin-bottom: 3px;
-}
-.barbiefigcaption {
-    background-color: #fcb4ca;
-    padding: 3px;
-    margin-top: 5px;
-    text-align: center;
-}
-.barbiefigure {
-    border: 1px solid #fcb4ca;
     display: flex;
     flex-flow: column;
     padding: 5px;
