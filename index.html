@@ -391,16 +391,11 @@ computing/computer 'software', and 'AI' (or artificial intelligence).</p>
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
     })();
-   var reset = function (newIdentifier, newUrl, newTitle, newLanguage) {
-            reload: true,
-            config: function () {
-                this.page.identifier = newIdentifier;
-                this.page.url = newUrl;
-                this.page.title = newTitle;
-                this.language = newLanguage;
-            }
-        });
-    };
+DISQUS.reset({
+  reload: true,
+  config: function () {  
+    this.page.identifier = "newidentifier";  
+    this.page.url = "http://example.com/#!newthread";
   }
 });
 </script>
