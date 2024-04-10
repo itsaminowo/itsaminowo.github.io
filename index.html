@@ -26,9 +26,10 @@
    style="display: block; margin-left: auto; margin-right: auto; float: left;" alt="Refresh Page" title="Refresh Page"></img>
   <button class="tablinks" onclick="openTopic(event, 'Privacy Policy')" style="float: right;" title="Internal / Privacy Policy">Privacy Policy</button>
   <button class="tablinks" onclick="openTopic(event, 'Sources')" style="float: right;" title="Internal / Sources">Sources</button>
-  <button class="tablinks" onclick="openTopic(event, 'Main Page')" style="float: right;" id="opendefualt" title="Internal / Main Page">Main Page</button>
-  <button class="tablinks" onclick="openTopic(event, 'Anime')" reset('Topic / Anime', 'https://itsaminowo.github.io/findoutsearch/anime', 'Anime', 'en') title="Topic / Anime">Anime</button>
-  <button class="tablinks" onclick="openTopic(event, 'Memes')" reset('Topic / Memes', 'https://itsaminowo.github.io/findoutsearch/memes', 'Memes', 'en') title="Topic / Memes">Memes</button>
+ 
+  <form action="/#main> <button class="tablinks" onclick="openTopic(event, 'Main Page')" style="float: right;" id="opendefualt" title="Internal / Main Page">Main Page</button></form>
+  <button class="tablinks" onclick="openTopic(event, 'Anime')" title="Topic / Anime">Anime</button>
+  <button class="tablinks" onclick="openTopic(event, 'Memes')" title="Topic / Memes">Memes</button>
   <button class="tablinks" onclick="openTopic(event, 'Math')" title="Topic / Math">Math</button>
   <button class="tablinks" onclick="openTopic(event, 'Coding')" title="Topic / Coding">Coding</button>
   <button class="tablinks" onclick="openTopic(event, 'Elon Musk')" title="Person / Elon Musk">Elon Musk</button>
@@ -371,8 +372,6 @@ computing/computer 'software', and 'AI' (or artificial intelligence).</p>
 </details>
     
     <p title="Topic / Links"><b>[Links unavailable for this topic...]</b></p>
-	    
-</div>
 
 <div id="disqus_thread"></div>
 <script>
@@ -391,16 +390,10 @@ computing/computer 'software', and 'AI' (or artificial intelligence).</p>
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
     })();
-DISQUS.reset({
-  reload: true,
-  config: function () {  
-    this.page.identifier = "Anime";  
-    this.page.url = "http://itsaminowo.github.io/findoutsearch/#anime";
-  }
-});
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
+	    
+</div>
 	
 <div id="footer" style="text-align: center;">
 <h5 title="The Privacy Policy and Sources Page">The Privacy Policy is available on the right side of the navigation bar. Copying text? Read section 3 of the Sources page.</h5>
