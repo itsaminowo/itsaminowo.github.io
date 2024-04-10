@@ -27,8 +27,8 @@
   <button class="tablinks" onclick="openTopic(event, 'Privacy Policy')" style="float: right;" title="Internal / Privacy Policy">Privacy Policy</button>
   <button class="tablinks" onclick="openTopic(event, 'Sources')" style="float: right;" title="Internal / Sources">Sources</button>
   <button class="tablinks" onclick="openTopic(event, 'Main Page')" style="float: right;" id="opendefualt" title="Internal / Main Page">Main Page</button>
-  <button class="tablinks" onclick="openTopic(event, 'Anime')" title="Topic / Anime">Anime</button>
-  <button class="tablinks" onclick="openTopic(event, 'Memes')" title="Topic / Memes">Memes</button>
+  <button class="tablinks" onclick="openTopic(event, 'Anime')" reset('Topic / Anime', 'https://itsaminowo.github.io/findoutsearch/anime', 'Anime', 'en') title="Topic / Anime">Anime</button>
+  <button class="tablinks" onclick="openTopic(event, 'Memes')" reset('Topic / Memes', 'https://itsaminowo.github.io/findoutsearch/memes', 'Memes', 'en') title="Topic / Memes">Memes</button>
   <button class="tablinks" onclick="openTopic(event, 'Math')" title="Topic / Math">Math</button>
   <button class="tablinks" onclick="openTopic(event, 'Coding')" title="Topic / Coding">Coding</button>
   <button class="tablinks" onclick="openTopic(event, 'Elon Musk')" title="Person / Elon Musk">Elon Musk</button>
@@ -140,33 +140,6 @@ is at the top-right corner of your screen.</p>
   
     <p title="Topic / Links"><b>Links:</b></p>
 	 <p title="Links / Link #1">&#x2022; <a href="https://www.4channel.org">4chan (4channel)</a> <sup>[1]</sup></p>
-
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = https://itsaminowo.github.io/findoutsearch/;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = Anime; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://fndtsrch.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-DISQUS.reset({
-  reload: true,
-  config: function () {  
-    this.page.identifier = "Memes";  
-    this.page.url = "https://itsaminowo.github.io/findoutsearch/";
-  }
-});
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 	
 </div>
 
@@ -399,6 +372,40 @@ computing/computer 'software', and 'AI' (or artificial intelligence).</p>
     
     <p title="Topic / Links"><b>[Links unavailable for this topic...]</b></p>
 	    
+</div>
+
+	<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = https://itsaminowo.github.io/findoutsearch/;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = Anime; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://fndtsrch.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+   var reset = function (newIdentifier, newUrl, newTitle, newLanguage) {
+            reload: true,
+            config: function () {
+                this.page.identifier = newIdentifier;
+                this.page.url = newUrl;
+                this.page.title = newTitle;
+                this.language = newLanguage;
+            }
+        });
+    };
+  }
+});
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	
 </div>
 	
 <div id="footer" style="text-align: center;">
