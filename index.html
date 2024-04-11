@@ -13,7 +13,6 @@
 <link rel="stylesheet" href="external/style.css">
 <style type="text/css">
   .mobileHide { display: inline; }
-
   @media only screen
     and (min-device-width : 320px)
     and (max-device-width : 480px){
@@ -26,8 +25,8 @@
    style="display: block; margin-left: auto; margin-right: auto; float: left;" alt="Refresh Page" title="Refresh Page"></img>
   <button class="tablinks" onclick="openTopic(event, 'Privacy Policy')" style="float: right;" title="Internal / Privacy Policy">Privacy Policy</button>
   <button class="tablinks" onclick="openTopic(event, 'Sources')" style="float: right;" title="Internal / Sources">Sources</button>
- 
-  <a href="https://itsaminowo.github.io/findoutsearch/#main"><button class="tablinks" onclick="openTopic(event, 'Main Page')" style="float: right;" id="opendefualt" title="Internal / Main Page">Main Page</button></a>
+  <button class="tablinks" onclick="openTopic(event, 'Submit A Comment')" style="float: right;" title="Internal / Submit A Comment">Submit A Comment</button>
+  <button class="tablinks" onclick="openTopic(event, 'Main Page')" style="float: right;" id="opendefualt" title="Internal / Main Page">Main Page</button>
   <button class="tablinks" onclick="openTopic(event, 'Anime')" title="Topic / Anime">Anime</button>
   <button class="tablinks" onclick="openTopic(event, 'Memes')" title="Topic / Memes">Memes</button>
   <button class="tablinks" onclick="openTopic(event, 'Math')" title="Topic / Math">Math</button>
@@ -37,11 +36,9 @@
   <button class="tablinks" onclick="openTopic(event, 'Youtubers')" title="Topic / Youtubers">Youtubers</button>
   <button class="tablinks" onclick="openTopic(event, 'Google')" title="Topic / Google">Google</button>
   <button class="tablinks" onclick="openTopic(event, 'Barbie')" title="Topic / Google">Barbie</button>
-
   <input id="searchbar" onkeyup="search_page()" type="text" name="search" placeholder="Don't find what you're looking for up there? Search for a page..." title="Search For a Page">
   
 </div>
-
 <div id="Unavailable" class="tabcontent">
   <h6 title="Internal / Breadcrumb">Internal / [Unavailable] <img src="content/fsadminlock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Admin Page / Locked" title="Admin Page / Locked"></img><img src="content/fsquestion.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Admin Page / Unavailable" title="Admin Page / Unavailable"></img></h6>
   <h3 class="header" title="Internal / [Unavailable]">Page Unavailable</h3><p>
@@ -49,7 +46,6 @@
   <p title="Unavailable / Page Unavailable"><b>Page unavailable at this time</b></p>
   <p title="Unavailable / Construction">&#x2022; This page exists, but it may not be fully completed.</p>
 </div>
-
 <div id="Main Page" class="tabcontent">
   <h6 title="Main Page / Breadcrumb">Internal / Main Page <img src="content/fsadminlock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Admin Page / Locked" title="Admin Page / Locked"></img></h6>
   <h3 class="header" title="Internal / Main Page">Main Page: FindOut Search</h3>
@@ -64,7 +60,6 @@ encyclopedia where you can find somewhat useful information on a variety of topi
    title="Internal / Media / fslogo.png" style="display: block; margin-left: auto; margin-right: auto; border: 1px solid #ccc;"></img>
      <figcaption style="font-size: 13px;" title="Media / Caption"><i>The FindOut Search Logo</i></figcaption>
   </figure>
-
   <p title="Main Page / How To"><b>How do I use FindOut Search?</b></p>
   <p title="Main Page / How To / Explanation">&#x2022; You may be thinking; how do I use this? Well all you have to do is
    is click or search for something that may interest you on the navigation bar above and get started reading!</p>
@@ -85,13 +80,11 @@ of the current public interest. Neutral pages display an 'unlocked' indicator.</
 mark' indicator, along with a 'locked' indicator.</p>
 <p title="Main Page / Indicators">&#x2022; The indicator/icon declaring a neutral (unlocked), admin (locked), unavailable page, or legacy page (locked)
 is at the top-right corner of your screen.</p> 
-
       <p title="Main Page / Comments"><b>What is the 'Comments' section?</b></p>
 	<p title="Main Page / Comments / Explanation">&#x2022; Comments are a new and experimental feature (released April 10th, 2024) that have been added to available non-admin
 	pages on FindOut Search for a more natural and lively experience on the platform. The 'Comments' section is currently marked by a gold colored 4-point star, indicating
 	a new, experimental, sought-after, or special feature. Comemnts must be submitted for approval in the 'Submit A Comment' page located at the right side of the navigation bar.</p>
 </div>
-
 <div id="Privacy Policy" class="tabcontent">
   <h6 title="Privacy Policy / Breadcrumb">Internal / Privacy Policy <img src="content/fsadminlock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Admin Page / Locked" title="Admin Page / Locked"></img></h6>
   <h3 class="header" title="Internal / Privacy Policy">Privacy Policy</h3>
@@ -108,7 +101,6 @@ is at the top-right corner of your screen.</p>
    <p title="Third Parties / Explanation">&#x2022; FindOut Search uses the thrid-party system, Google Search Console, by Google LLC, to collect user data such as the country where a device that visits FindOut Search may be located, 
    or the type of device that visits FindOut Search (such as desktops, mobile devices, etc.). We recommend that you read Google's general <a href="https://policies.google.com/privacy?hl=en">Privacy Policy</a>.</p>
 </div>
-
 <div id="Sources" class="tabcontent">
   <h6 title="Sources / Breadcrumb">Internal / Sources <img src="content/fsadminlock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Admin Page / Locked" title="Admin Page / Locked"></img></h6>
   <h3 class="header" title="Internal / Sources">Sources</h3>
@@ -127,7 +119,16 @@ is at the top-right corner of your screen.</p>
    of topics and people. If you think the information is useful and may need to use it, you must credit
    FindOut Search by including the sources tag, 'Information provided by FindOut Search'. Remember to use [sic] when pointing out mistakes.</p>
 </div>
-
+<div id="Submit A Comment" class="tabcontent">
+  <h6 title="Submit A Comment / Breadcrumb">Internal / Submit A Comment <img src="content/fsadminlock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Admin Page / Locked" title="Admin Page / Locked"></img></h6>
+  <h3 class="header" title="Internal / Submit A Comment">Submit A Comment</h3>
+  <hr title="Submit A Comment / Divider">
+  <p title="Submit A Comment / How To Submit A Comment"><b>How To Submit A Comment</b></p>
+   
+  <p title="How To Submit A Comment / Explanation">&#x2022; To submit a comment, please DM (direct message) the founder of FindOut Search @ <i>vhxs_</i> on Discord with a comment request in the following markdown format: <b>``` [ (YOUR EMAIL) ] [ (YOUR SET USER ON FINDOUT SEARCH) ] [ (AVAILABLE NON-ADMIN PAGE TO COMMENT ON) ] [ (YOUR COMMENT) ] [ (YOUR NAME) ] ```</b></p>
+  <p title="How To Submit A Comment / Attached Info"><i>Please keep the brackets when the information is filled in, or your comment request will not be accepted. Furthermore, note that all names and emails submitted through the comment requests will not be shared, or attached to your comment on the FindOut Search website.</i></p>
+  
+ </div>
 <div id="Anime" class="tabcontent">
   <h6 title="Topic / Breadcrumb">Internal / Topic / Anime <img src="content/fslegacylock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Legacy Page / Locked" title="Legacy Page / Locked"></img></h6>
   <h3 class="header" title="Topic / Anime">Anime</h3>
@@ -136,14 +137,16 @@ is at the top-right corner of your screen.</p>
    
   <p title="Topic / Information">&#x2022; 'anime' is a type of comic art (can be hand drawn or computer generated) that originated in japan. 'anime' gained excess popularity 
   around 2007 due to internet culture-based platforms like <a href="https://www.4channel.org">4chan</a> <sup>[1]</sup>.</p>
+	<details>
+	<summary title="Topic / Comments" style="color:#FFC000;"><b>Comments ✧ <sup>[1]</sup></b></summary>
+	<p title="Topic / Comment by @crzyw"><b style="color:#FFC000;">@crzyw</b> Imagine still watching anime in 2024</p>
+	</details>	
 	
   <p title="Topic / Disambiguation"><b>[Disambiguation unavailable for this topic...]</b></p>
   
     <p title="Topic / Links"><b>Links:</b></p>
 	 <p title="Links / Link #1">&#x2022; <a href="https://www.4channel.org">4chan (4channel)</a> <sup>[1]</sup></p>
-	
 </div>
-
 <div id="Memes" class="tabcontent">
   <h6 title="Topic / Breadcrumb">Internal / Topic / Memes <img src="content/fslegacylock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Legacy Page / Locked" title="Legacy Page / Locked"></img></h6>
   <h3 class="header" title="Topic / Memes">Memes</h3>
@@ -152,13 +155,15 @@ is at the top-right corner of your screen.</p>
    
   <p title="Topic / Information">&#x2022; a 'meme' is a funny joke (either mocking or for the sake of comedic purposes) 
   that is circulated through the interent (often involved with internet culture).</p>
+	<details>
+	<summary title="Topic / Comments" style="color:#FFC000;"><b>Comments ✧ <sup>[1]</sup></b></summary>
+	<p title="Topic / Comment by @eeee"><b style="color:#FFC000;">@eeee</b> add tiktok rizz party</p>
+	</details>	
 	
   <p title="Topic / Disambiguation"><b>[Disambiguation unavailable for this topic...]</b></p>
     
     <p title="Topic / Links"><b>[Links unavailable for this topic...]</b></p>
-	
 </div>
-
 <div id="Doge" class="tabcontent">
   <h6 title="Topic / Breadcrumb">Internal / Topic / Doge <img src="content/fsunlock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Neutral Page / Unlocked" title="Neutral Page / Unlocked"></img></h6>
   <h3 class="header" title="Topic / Doge">Doge</h3>
@@ -168,13 +173,11 @@ is at the top-right corner of your screen.</p>
    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Doge_homemade_meme.jpg/640px-Doge_homemade_meme.jpg
    " width="auto" height="183" alt="Internal / Media / 640px-Doge_homemade_meme.jpg"
    title="Internal / Media / 640px-Doge_homemade_meme.jpg" style="display: block; margin-left: auto; margin-right: auto; border: 1px solid #ccc;"></img>
-
      <figcaption style="font-size: 13px;" title="Media / Caption"><i>The Doge 'Meme'
 	 (Image Source: <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Doge_homemade_meme.jpg/640px-Doge_homemade_meme.jpg">Wikimedia Commons</a> <sup>[1]</sup>)</i></figcaption>
  
     <figcaption style="font-size: 13px;" title="Topic / Meme Birth">Birth of Meme: 2013</figcaption>
   <figcaption style="font-size: 13px;" title="Topic / Meme Death">Death of Meme: Not recorded</figcaption>
-
 </figure>
 	
   <p title="Information / Source (Read the Sources page for more)"><i><b>Information provided by FindOut Search</i></b></p>
@@ -187,14 +190,17 @@ is at the top-right corner of your screen.</p>
  <p title="Related / Information">&#x2022; 'dogecoin' is a 'cryptocurrency'
 that was made after/in response to the popularization of the 'doge'.</p>
 </details>
+	<details>
+	<summary title="Topic / Comments" style="color:#FFC000;"><b>Comments ✧ <sup>[1]</sup></b></summary>
+	<p title="Topic / Comment by @eeee"><b style="color:#FFC000;">@eeee</b> didnt doge die? why is this still a page?</p>
+	</details>	
 	
   <p title="Topic / Disambiguation"><b>[Disambiguation unavailable for this topic...]</b></p>
     
     <p title="Topic / Links"><b>Links:</b></p>
     <p title="Links / Link #1">&#x2022; <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Doge_homemade_meme.jpg/640px-Doge_homemade_meme.jpg">Wikimedia Commons: 640px-Doge_homemade_meme.jpg</a> <sup>[1]</sup></p>
-	
+  
 </div>
-
 <div id="Math" class="tabcontent">
   <h6 title="Topic / Breadcrumb">Internal / Topic / Math <img src="content/fsunlock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Neutral Page / Unlocked" title="Neutral Page / Unlocked"></img></h6>
   <h3 class="header" title="Topic / Math">Math</h3>
@@ -209,14 +215,15 @@ include a 'variable' (eg. x or y). once your 'proportion' is set up, 'cross mult
 and bottom left to top right. once done, divide everything by the number you 'multiplied' with you 'variable'. once this is done,
 'divide' both 'numerators' to get the 'equivalent' of your 'variable'.</p>
 </details>
+		<details>
+	<summary title="Topic / Comments" style="color:#FFC000;"><b>Comments ✧ <sup>[1]</sup></b></summary>
+	<p title="Topic / Comment by @slxve"><b style="color:#FFC000;">@slxve</b> not me using this for hs</p>
+	</details>	
 	
   <p title="Topic / Disambiguation"><b>[Disambiguation unavailable for this topic...]</b></p>
     
     <p title="Topic / Links"><b>[Links unavailable for this topic...]</b></p>
-
-	
 </div>
-
 <div id="Coding" class="tabcontent">
   <h6 title="Topic / Breadcrumb">Internal / Topic / Coding <img src="content/fslegacylock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Legacy Page / Locked" title="Legacy Page / Locked"></img></h6>
   <h3 class="header" title="Topic / Coding">Coding</h3>
@@ -236,14 +243,14 @@ which is used with the primary intent to show main content on a 'web page'.</p>
 language which is used with the primary intent of syling 'html' code with an 'id', 'class', or 'attribute'.
 'css' code can be inserted directly into a 'style' tag, an 'attribute', or through an 'external' file.</p>
 </details>
-	
+	<details>
+	<summary title="Topic / Comments" style="color:#FFC000;"><b>Comments ✧ <sup>[1]</sup></b></summary>
+	<p title="Topic / Comment by @one"><b style="color:#FFC000;">@one</b> We love coding</p>
+	</details>	
   <p title="Topic / Disambiguation"><b>[Disambiguation unavailable for this topic...]</b></p>
   
     <p title="Topic / Links"><b>[Links unavailable for this topic...]</b></p>
-
-	
 </div>
-
 <div id="Elon Musk" class="tabcontent">
   <h6 title="Person / Breadcrumb">Internal / Person / Elon Musk <img src="content/fslegacylock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Legacy Page / Locked" title="Legacy Page / Locked"></img></h6>
   <h3 class="header" title="Person / Elon Musk">Elon Musk</h3>
@@ -253,13 +260,11 @@ language which is used with the primary intent of syling 'html' code with an 'id
    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Elon_Musk_and_the_Neuralink_Future.jpg/640px-Elon_Musk_and_the_Neuralink_Future.jpg
    " width="auto" height="195" alt="Internal / Media / 640px-Elon_Musk_and_the_Neuralink_Future.jpg"
    title="Internal / Media / 640px-Elon_Musk_and_the_Neuralink_Future.jpg" style="display: block; margin-left: auto; margin-right: auto; border: 1px solid #ccc;"></img>
-
      <figcaption style="font-size: 13px;" title="Media / Caption"><i>Photo of Elon Musk
 	 (Image Source: <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Elon_Musk_and_the_Neuralink_Future.jpg/640px-Elon_Musk_and_the_Neuralink_Future.jpg">Wikimedia Commons</a> <sup>[1]</sup>)</i></figcaption>
  
  <figcaption style="font-size: 13px;" title="Person / Birthday">Born: June 28th, 1971</figcaption>
   <figcaption style="font-size: 13px;" title="Person / Net Worth Hierarchy">Net Worth Hierarchy: Second Richest (Globally)</figcaption>
-
 </figure>
 	
   <p title="Information / Source (Read the Sources page for more)"><i><b>Information provided by FindOut Search</i></b></p>
@@ -271,54 +276,49 @@ language which is used with the primary intent of syling 'html' code with an 'id
  <p title="Related / Information">&#x2022; 'twitter' is a social media platform where users
 can post 'tweets' containing media and text, media only, or plain text. as of february 1st, 2023, 'elon musk' is the ceo of 'twitter'.</p>
 </details>
+ 
+	<details>
+	<summary title="Topic / Comments" style="color:#FFC000;"><b>Comments ✧ <sup>[1]</sup></b></summary>
+	<p title="Topic / Comment by @crzyw"><b style="color:#FFC000;">@crzyw</b> ELON IS A SCUM!</p>
+	</details>	
 	
 	<p title="Person / Disambiguation"><b>[Disambiguation unavailable for this person...]</b></p>
   
     <p title="Person / Links"><b>Links:</b></p>
 	 <p title="Links / Link #1">&#x2022; <a href="https://www.forbes.com/real-time-billionaires/#229644de3d78">Forbes: Real Time Billionares</a> <sup>[1]</sup></p>
          <p title="Links / Link #2">&#x2022; <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Elon_Musk_and_the_Neuralink_Future.jpg/640px-Elon_Musk_and_the_Neuralink_Future.jpg">Wikimedia Commons: 640px-Elon_Musk_and_the_Neuralink_Future.jpg</a> <sup>[2]</sup></p>
-
-
-
 </div>
-
 <div id="Youtubers" class="tabcontent">
   <h6 title="Topic / Breadcrumb">Internal / Topic / Youtubers <img src="content/fslegacylock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Legacy Page / Locked" title="Legacy Page / Locked"></img></h6>
   <h3 class="header" title="Topic / Youtubers">Youtubers</h3>
   <hr title="Topic / Divider">
-
 <figure style="float: right;" class="mobileHide">
-
  <figcaption style="font-size: 13px; margin-top: 0px;" title="Topic / Primary Platform">Primary Platform: YouTube</figcaption>
   <figcaption style="font-size: 13px;" title="Topic / General Subscribers">Generally Considered Amount of Subscribers: 70,000+</figcaption>
   <figcaption style="font-size: 13px;" title="Topic / Most Subscribed">Most Subscribed Youtuber: MrBeast (120,000,000+ Subscribers)</figcaption>
-
 </figure>
-
   <p title="Information / Source (Read the Sources page for more)"><i><b>Information provided by FindOut Search</i></b></p>
    
   <p title="Topic / Information">&#x2022; 'youtubers' are mainly known for appearing on the video sharing platform 'youtube'.
 	'youtubers' often have a high amount of 'subscribers' (generally 70,000+) and are well known in the 'youtube' community.</p>
+	<details>
+	<summary title="Topic / Comments" style="color:#FFC000;"><b>Comments ✧ <sup>[1]</sup></b></summary>
+	<p title="Topic / Comment by @mrbeast"><b style="color:#FFC000;">@mrbeast</b> lol mrbeast!</p>
+	</details>	
 	
   <p title="Topic / Disambiguation"><b>[Disambiguation unavailable for this topic...]</b></p>
     
     <p title="Topic / Links"><b>[Links unavailable for this topic...]</b></p>
-	
 </div>
-
 <div id="Google" class="tabcontent">
   <h6 title="Topic / Breadcrumb">Internal / Topic / Google <img src="content/fslegacylock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Legacy Page / Locked" title="Legacy Page / Locked"></img></h6>
   <h3 class="header" title="Topic / Google">Google</h3>
   <hr title="Topic / Divider">
-
 <figure style="float: right;" class="mobileHide">
-
  <figcaption style="font-size: 13px; margin-top: 0px;" title="Topic / Founders">Founders: Sergey Brin, Larry Page</figcaption>
   <figcaption style="font-size: 13px;" title="Topic / Visits Per Month">Visits Per Month (www.google.com): 89,000,000,000+</figcaption>
   <figcaption style="font-size: 13px;" title="Topic / Date Founded">Founded: September 4th, 1998</figcaption>
-
 </figure>
-
   <p title="Information / Source (Read the Sources page for more)"><i><b>Information provided by FindOut Search</i></b></p>
    
   <p title="Topic / Information">&#x2022; 'google' is a technology company
@@ -330,31 +330,30 @@ computing/computer 'software', and 'AI' (or artificial intelligence).</p>
  <p title="Related / Information">&#x2022; 'sergey brin' is an american internet entrepreneur
  most famously known for co-founding 'google' alongside 'larry page'.</p>
 </details>
-
     <details open>
 <summary title="Topic / Relation #2"><b>Related: Larry Page</b></summary>
  <p title="Related / Information">&#x2022; 'larry page' is an american interent entrepreneur
  most famously known for co-founding 'google' alongside 'sergey brin'.</p>
 </details>
+	<details>
+	<summary title="Topic / Comments" style="color:#FFC000;"><b>Comments ✧ <sup>[4]</sup></b></summary>
+	<p title="Topic / Comment by @firstonelast"><b style="color:#FFC000;">@firstonelast</b> Used this in a book report, didnt know who the hell Sergey Brin was till i read this.</p>
+	<p title="Topic / Comment by @sjskizzy"><b style="color:#FFC000;">@sjskizzy</b> love how the information is Just simple and dumbed down</p>
+	<p title="Topic / Comment by @Hxgs4sphie"><b style="color:#FFC000;">@Hxgs4sphie</b> Tbh this is better than Wikipedia. I like how the info is straight to the point. A friend recommended this site btw.</p>
+	<p title="Topic / Comment by @one"><b style="color:#FFC000;">@one</b> This is new.</p>
+	</details>
 	
   <p title="Topic / Disambiguation"><b>[Disambiguation unavailable for this topic...]</b></p>   
  <p title="Topic / Links"><b>[Links unavailable for this topic...]</b></p>
-
-	
 </div>
-
 <div id="Barbie" class="tabcontent">
   <h6 title="Topic / Breadcrumb">Internal / Topic / Barbie <img src="content/fsunlock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Neutral Page / Unlocked" title="Neutral Page / Unlocked"></img></h6>
   <h3 class="header" title="Topic / Barbie">Barbie</h3>
   <hr title="Topic / Divider">
-
 <figure style="float: right;" class="mobileHide">
-
  <figcaption style="font-size: 13px; margin-top: 0px;" title="Topic / Created By">Created By: Ruth Handler</figcaption>
   <figcaption style="font-size: 13px;" title="Topic / First Appearance">First Appearance: March 9th, 1959</figcaption>
-
 </figure>
-
   <p title="Information / Source (Read the Sources page for more)"><i><b>Information provided by FindOut Search</i></b></p>
    
   <p title="Topic / Information">&#x2022; 'barbie' or 'barbies' are a line of fashion dolls created by buisnesswoman 
@@ -364,15 +363,15 @@ computing/computer 'software', and 'AI' (or artificial intelligence).</p>
 <summary title="Topic / Relation #1"><b>Related: Mattel</b></summary>
  <p title="Related / Information">&#x2022; 'mattel' is an american toy company founded by 'ruth handler' and 'elliot handler' 
 	 in los angeles. 'mattel' manufactures toys such as 'hot wheels' and 'barbies'.</p>
-	
-    <details>
-<summary title="Topic / Disambiguation"><b>Disambiguation: Barbie Movie</b></summary>
- <p title="Disambiguation / Information">&#x2022; the 'barbie' movie is a film released on july 21st, 2023. the film 
- is rated pg-13 and is about 1 hour and 54 minutes long.</p>
 </details>
-    
-    <p title="Topic / Links"><b>[Links unavailable for this topic...]</b></p>
 
+	<details>
+	<summary title="Topic / Comments" style="color:#FFC000;"><b>Comments ✧ <sup>[4]</sup></b></summary>
+	<p title="Topic / Comment by @one"><b style="color:#FFC000;">@one</b> Just watched the Barbie movie, it was great!</p>
+	<p title="Topic / Comment by @hellokitty"><b style="color:#FFC000;">@hellokitty</b> hi</p>
+	<p title="Topic / Comment by @ssdj"><b style="color:#FFC000;">@ssdj</b> ew whys pink.</p>
+	<p title="Topic / Comment by @one"><b style="color:#FFC000;">@one</b> ?</p>
+	</details>
 <div id="disqus_thread"></div>
 <script>
     /**
@@ -381,7 +380,7 @@ computing/computer 'software', and 'AI' (or artificial intelligence).</p>
     /*
     var disqus_config = function () {
     this.page.url = https://itsaminowo.github.io/findoutsearch/;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = 001; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    this.page.identifier = 43a2abb; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
     (function() { // DON'T EDIT BELOW THIS LINE
@@ -392,7 +391,14 @@ computing/computer 'software', and 'AI' (or artificial intelligence).</p>
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-	    
+
+    <details>
+<summary title="Topic / Disambiguation"><b>Disambiguation: Barbie Movie</b></summary>
+ <p title="Disambiguation / Information">&#x2022; the 'barbie' movie is a film released on july 21st, 2023. the film 
+ is rated pg-13 and is about 1 hour and 54 minutes long.</p>
+</details>
+    
+    <p title="Topic / Links"><b>[Links unavailable for this topic...]</b></p>
 </div>
 	
 <div id="footer" style="text-align: center;">
