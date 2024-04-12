@@ -1,46 +1,444 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Disqus AJAX Test Site</title>
+<title>FindOut Search</title>
+<link rel="apple-touch-icon" sizes="180x180" href="content/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="content/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="content/favicon-16x16.png">
+<link rel="manifest" href="content/site.webmanifest">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#ddd" />
+<meta charset="UTF-8"> 
+<meta name="google-site-verification" content="K6iIFaJRZya6A9k2YQBekwuNwn69B0hFD7KSZgvAWlI" />
+<link rel="stylesheet" href="external/style.css">
+<style type="text/css">
+  .mobileHide { display: inline; }
+  @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px){
+     .mobileHide { display: none;}
+  }
+</style>
 </head>
-<body>
-
-<button onclick="reset('newid1', 'http://example.com/unique-path-to-article1/', 'Article Title 1', 'en');">Load article 1</button>
-<button onclick="reset('newid2', 'http://example.com/unique-path-to-article2/', 'Article Title 2', 'en');">Load article 2</button>
-<button onclick="reset('newid3', 'http://example.com/unique-path-to-article3/', 'Article Title 3', 'en');">Load article 3</button>
-<button onclick="reset('newid4', 'http://example.com/unique-path-to-article4/', 'Article Title 4', 'ru');">Load article 4 (Russian)</button>
-
+<div class="tab">
+  <img src="content/fsiconnobg.png" width="auto" height="48" onClick="window.location.href=window.location.href"
+  style="display: block; margin-left: auto; margin-right: auto; float: left;" alt="Refresh Page" title="Refresh Page"></img>
+  <button class="tablinks" onclick="openTopic(event, 'Privacy Policy')" style="float: right;" title="Internal / Privacy Policy">Privacy Policy</button>
+  <button class="tablinks" onclick="openTopic(event, 'Sources')" style="float: right;" title="Internal / Sources">Sources</button>
+  <button class="tablinks" onclick="openTopic(event, 'Chat Board')" style="float: right;" title="Internal / Submit A Comment">Chat Board</button>
+  <button class="tablinks" onclick="openTopic(event, 'Submit A Comment')" style="float: right;" title="Internal / Submit A Comment">Submit A Comment</button>
+  <button class="tablinks" onclick="openTopic(event, 'Main Page')" style="float: right;" id="opendefualt" title="Internal / Main Page">Main Page</button>
+  <button class="tablinks" onclick="openTopic(event, 'Anime')" title="Topic / Anime">Anime</button>
+  <button class="tablinks" onclick="openTopic(event, 'Memes')" title="Topic / Memes">Memes</button>
+  <button class="tablinks" onclick="openTopic(event, 'Math')" title="Topic / Math">Math</button>
+  <button class="tablinks" onclick="openTopic(event, 'Coding')" title="Topic / Coding">Coding</button>
+  <button class="tablinks" onclick="openTopic(event, 'Elon Musk')" title="Person / Elon Musk">Elon Musk</button>
+  <button class="tablinks" onclick="openTopic(event, 'Doge')" title="Topic / Doge">Doge</button>
+  <button class="tablinks" onclick="openTopic(event, 'Youtubers')" title="Topic / Youtubers">Youtubers</button>
+  <button class="tablinks" onclick="openTopic(event, 'Google')" title="Topic / Google">Google</button>
+  <button class="tablinks" onclick="openTopic(event, 'Barbie')" title="Topic / Google">Barbie</button>
+  <button class="tablinks" onclick="openTopic(event, 'TikTok Rizz Party')" title="Topic / TikTok Rizz Party">TikTok Rizz Party</button>
+  <input id="searchbar" onkeyup="search_page()" type="text" name="search" placeholder="Don't find what you're looking for up there? Search for a page..." title="Search For a Page">
+  
+</div>
+<div id="Unavailable" class="tabcontent">
+  <h6 title="Internal / Breadcrumb">Internal / [Unavailable] <img src="content/fsadminlock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Admin Page / Locked" title="Admin Page / Locked"></img><img src="content/fsquestion.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Admin Page / Unavailable" title="Admin Page / Unavailable"></img></h6>
+  <h3 class="header" title="Internal / [Unavailable]">Page Unavailable</h3><p>
+  <hr title="Unavailable / Divider">
+  <p title="Unavailable / Page Unavailable"><b>Page unavailable at this time</b></p>
+  <p title="Unavailable / Construction">&#x2022; This page exists, but it may not be fully completed.</p>
+</div>
+<div id="Main Page" class="tabcontent">
+  <h6 title="Main Page / Breadcrumb">Internal / Main Page <img src="content/fsadminlock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Admin Page / Locked" title="Admin Page / Locked"></img></h6>
+  <h3 class="header" title="Internal / Main Page">Main Page: FindOut Search</h3>
+  <hr title="Main Page / Divider">
+  <sup title="Thanks for visiting and using FindOut Search ✧/ᐠ-ꞈ-ᐟ\"><i>Thanks for visiting and using FindOut Search</i> ✧/ᐠ-ꞈ-ᐟ\</sup>
+  <p title="Main Page / Welcome"><b>Welcome to FindOut Search, today is <span id='date'></span>.</b></p>
+  <p title="Main Page / About">&#x2022; FindOut Search is a digital
+encyclopedia where you can find somewhat useful information on a variety of topics and people.</p>
+	
+ <figure style="float: right;" class="mobileHide">
+   <img src="content/fslogo.png" width="auto" height="180" alt="Internal / Media / fslogo.png"
+   title="Internal / Media / fslogo.png" style="display: block; margin-left: auto; margin-right: auto; border: 1px solid #ccc;"></img>
+     <figcaption style="font-size: 13px;" title="Media / Caption"><i>The FindOut Search Logo</i></figcaption>
+  </figure>
+  <p title="Main Page / How To"><b>How do I use FindOut Search?</b></p>
+  <p title="Main Page / How To / Explanation">&#x2022; You may be thinking; how do I use this? Well all you have to do is
+   is click or search for something that may interest you on the navigation bar above and get started reading!</p>
+   
+     <p title="Main Page / Tooltips"><b>Tooltips: Knowing what's what</b></p>
+  <p title="Main Page / Tooltips / Explanation">&#x2022; When you hover over an item (eg. a header), you will be able
+  to see what that item is, along with it's directory.</p>
+  
+     <p title="Main Page / Locked Pages"><b>What are locked pages?</b></p>
+ <p title="Main Page / Locked Pages / Explanation">&#x2022; A locked page is a page that is
+  either essential (eg. admin page) to FindOut Search or is a legacy page. An admin page displays a 'locked' indicator.</p>
+    <p title="Main Page / Locked Pages / Legacy Pages">&#x2022; A legacy page can
+	be about or designated to a topic or person that is general and seems to go into public interest very often.
+	A legacy page displays a 'locked' indicator.
+<p title="Main Page / Neutral Pages">&#x2022; The opposite of a legacy page is a neutral page. Neutral pages can be about or designated to a topic or person that is not
+of the current public interest. Neutral pages display an 'unlocked' indicator.</p>
+<p title="Main Page / Unavailable Pages">&#x2022; If a page is unavailable (eg. an error page), you will be given a 'question
+mark' indicator, along with a 'locked' indicator.</p>
+<p title="Main Page / Indicators">&#x2022; The indicator/icon declaring a neutral (unlocked), admin (locked), unavailable page, or legacy page (locked)
+is at the top-right corner of your screen.</p> 
+      <p title="Main Page / Comments"><b>What is the 'Comments' section?</b></p>
+      <p title="Main Page / Comments & Chat Board"><b>What is the 'Comments' section, and what is the 'Chat Board'?</b></p>
+	<p title="Main Page / Comments / Explanation">&#x2022; Comments are a new and experimental feature (released April 10th, 2024) that have been added to available non-admin
+	pages on FindOut Search for a more natural and lively experience on the platform. The 'Comments' section is currently marked by a gold colored 4-point star, indicating
+	a new, experimental, sought-after, or special feature. Comemnts must be submitted for approval in the 'Submit A Comment' page located at the right side of the navigation bar.</p>
+	<p title="Main Page / Chat Board / Explanation">&#x2022; The chat board (accessible via the 'Chat Board' page) is a forum-like system where users on FindOut Search can post content/comments on the site. 
+	Prior to posting on the chat board, you must read the rules & notes pertaining to the chat board on it's page.</p>
+</div>
+<div id="Privacy Policy" class="tabcontent">
+  <h6 title="Privacy Policy / Breadcrumb">Internal / Privacy Policy <img src="content/fsadminlock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Admin Page / Locked" title="Admin Page / Locked"></img></h6>
+  <h3 class="header" title="Internal / Privacy Policy">Privacy Policy</h3>
+  <hr title="Privacy Policy / Divider">
+  <p title="Privacy Policy / Data Collection"><b>Data Collection</b></p>
+   
+  <p title="Data Collection / Explanation">&#x2022; FindOut Search will not directly collect personal data or information about you without trusted thrid-party sources.</p>
+  
+  <p title="Privacy Policy / Cookies"><b>Cookies</b></p>
+   <p title="Cookies / Explanation">&#x2022; FindOut Search does not and will not use cookies with the intention
+   to optimize your experience on FindOut Search or collect data.</p>
+   
+  <p title="Privacy Policy / Third Parties"><b>Third Parties</b></p>
+   <p title="Third Parties / Explanation">&#x2022; FindOut Search uses the thrid-party system, Google Search Console, by Google LLC, to collect user data such as the country where a device that visits FindOut Search may be located, 
+   or the type of device that visits FindOut Search (such as desktops, mobile devices, etc.). We recommend that you read Google's general <a href="https://policies.google.com/privacy?hl=en">Privacy Policy</a>.</p>
+</div>
+<div id="Sources" class="tabcontent">
+  <h6 title="Sources / Breadcrumb">Internal / Sources <img src="content/fsadminlock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Admin Page / Locked" title="Admin Page / Locked"></img></h6>
+  <h3 class="header" title="Internal / Sources">Sources</h3>
+  <hr title="Sources / Divider">
+  <p title="Sources / Media"><b>Media (Images, GIFs, & Videos)</b></p>
+   
+  <p title="Media / Explanation">&#x2022; FindOut Search may use Creative Commons licensed media
+  provided by <a href="https://commons.wikimedia.org/wiki/Main_Page">Wikimedia Commons</a> which has a collection of over 98 million images, videos, and more work licensed by/under the Creative Commons.</p>
+  
+  <p title="Sources / Inspiration"><b>Inspiration</b></p>
+   <p title="Inspiration / Explanation">&#x2022; FindOut Search's design and layout is heavily inspired by the 2023
+   re-design of Wikipedia.</p>
+   
+  <p title="Sources / Using Info"><b>Using information provided by FindOut Search</b></p>
+   <p title="Using Info / Explanation">&#x2022; FindOut Search provides information on a variety
+   of topics and people. If you think the information is useful and may need to use it, you must credit
+   FindOut Search by including the sources tag, 'Information provided by FindOut Search'. Remember to use [sic] when pointing out mistakes.</p>
+</div>
+<div id="Submit A Comment" class="tabcontent">
+  <h6 title="Submit A Comment / Breadcrumb">Internal / Submit A Comment <img src="content/fsadminlock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Admin Page / Locked" title="Admin Page / Locked"></img></h6>
+  <h3 class="header" title="Internal / Submit A Comment">Submit A Comment</h3>
+  <hr title="Submit A Comment / Divider">
+  <p title="Submit A Comment / How To Submit A Comment"><b>How To Submit A Comment</b></p>
+   
+  <p title="How To Submit A Comment / Explanation">&#x2022; To submit a comment, please DM (direct message) the founder of FindOut Search @ <i>vhxs_</i> on Discord with a comment request in the following markdown format: <b>``` [ (YOUR EMAIL) ] [ (YOUR SET USER ON FINDOUT SEARCH) ] [ (AVAILABLE NON-ADMIN PAGE TO COMMENT ON) ] [ (YOUR COMMENT) ] [ (YOUR NAME) ] ```</b></p>
+  <p title="How To Submit A Comment / Attached Information"><i>Please keep the brackets when the information is filled in, or your comment request will not be accepted. Emojis may not be included. Furthermore, note that all names and emails submitted through the comment requests will not be shared, or attached to your comment on the FindOut Search website.</i></p>
+  
+ </div>
+<div id="Chat Board" class="tabcontent">
+<h6 title="Chat Board / Breadcrumb">Internal / Chat Board <img src="content/fsadminlock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Admin Page / Locked" title="Admin Page / Locked"></img></h6>
+<p title="Chat Board / Chat Board Rules & Notes"><b>Chat Board Rules</b></p>
+<p title="Chat Board Rules & Notes / Chat Board Rules">&#x2022; Keep the chat board safe and civil at all times. This means that innapropriate content of any nature will not be tollerated and will be swiftly deleted.</p>
+<p title="Chat Board Rules & Notes / Chat Board Note #1, Moderation">&#x2022; Any post added to the chat board may be subject to either automatic, or manual moderation, regardless of it's nature.</p>
+<p title="Chat Board Rules & Notes / Chat Board Note #2, Uses">&#x2022; The chat board may be used for suggestions regarding FindOut Search, or just simply as place to socialize.</p>
+<p title="Chat Board / Chat Board Credits"><b>Chat Board Credits</b></p>
+<p title="Chat Board Credits / Credit to Disqus">&#x2022; The addition of the chat board on April 11th 2024 has been made possible by the threads and forums provider, 'Disqus'.</p>
 <div id="disqus_thread"></div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'example';
-    var disqus_identifier = 'newid1';
-    var disqus_url = 'http://example.com/unique-path-to-article-1/';
-	var disqus_config = function () { 
-	  this.language = "en";
-	};
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-
-    /* * * Disqus Reset Function * * */
-    var reset = function (newIdentifier, newUrl, newTitle, newLanguage) {
-        DISQUS.reset({
-            reload: true,
-            config: function () {
-                this.page.identifier = newIdentifier;
-                this.page.url = newUrl;
-                this.page.title = newTitle;
-                this.language = newLanguage;
-            }
-        });
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = https://itsaminowo.github.io/findoutsearch/;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 01; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://fndtsrch.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+	
+<div id="Anime" class="tabcontent">
+  <h6 title="Topic / Breadcrumb">Internal / Topic / Anime <img src="content/fslegacylock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Legacy Page / Locked" title="Legacy Page / Locked"></img></h6>
+  <h3 class="header" title="Topic / Anime">Anime</h3>
+  <hr title="Topic / Divider">
+  <p title="Information / Source (Read the Sources page for more)"><i><b>Information provided by FindOut Search</i></b></p>
+   
+  <p title="Topic / Information">&#x2022; 'anime' is a type of comic art (can be hand drawn or computer generated) that originated in japan. 'anime' gained excess popularity 
+  around 2007 due to internet culture-based platforms like <a href="https://www.4channel.org">4chan</a> <sup>[1]</sup>.</p>
+	<details>
+	<summary title="Topic / Comments" style="color:#FFC000;"><b>Comments ✧ <sup>[1]</sup></b></summary>
+	<p title="Topic / Comment by @crzyw"><b style="color:#FFC000;">@crzyw</b> Imagine still watching anime in 2024</p>
+	</details>	
+	
+  <p title="Topic / Disambiguation"><b>[Disambiguation unavailable for this topic...]</b></p>
+  
+    <p title="Topic / Links"><b>Links:</b></p>
+	 <p title="Links / Link #1">&#x2022; <a href="https://www.4channel.org">4chan (4channel)</a> <sup>[1]</sup></p>
+</div>
+<div id="Memes" class="tabcontent">
+  <h6 title="Topic / Breadcrumb">Internal / Topic / Memes <img src="content/fslegacylock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Legacy Page / Locked" title="Legacy Page / Locked"></img></h6>
+  <h3 class="header" title="Topic / Memes">Memes</h3>
+  <hr title="Topic / Divider">
+  <p title="Information / Source (Read the Sources page for more)"><i><b>Information provided by FindOut Search</i></b></p>
+   
+  <p title="Topic / Information">&#x2022; a 'meme' is a funny joke (either mocking or for the sake of comedic purposes) 
+  that is circulated through the interent (often involved with internet culture).</p>
+	<details>
+	<summary title="Topic / Comments" style="color:#FFC000;"><b>Comments ✧ <sup>[1]</sup></b></summary>
+	<p title="Topic / Comment by @eeee"><b style="color:#FFC000;">@eeee</b> add tiktok rizz party</p>
+	</details>	
+	
+  <p title="Topic / Disambiguation"><b>[Disambiguation unavailable for this topic...]</b></p>
+    
+    <p title="Topic / Links"><b>[Links unavailable for this topic...]</b></p>
+</div>
+<div id="Doge" class="tabcontent">
+  <h6 title="Topic / Breadcrumb">Internal / Topic / Doge <img src="content/fsunlock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Neutral Page / Unlocked" title="Neutral Page / Unlocked"></img></h6>
+  <h3 class="header" title="Topic / Doge">Doge</h3>
+  <hr title="Topic / Divider">
+	
+   <figure style="float: right;" class="mobileHide">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Doge_homemade_meme.jpg/640px-Doge_homemade_meme.jpg
+   " width="auto" height="183" alt="Internal / Media / 640px-Doge_homemade_meme.jpg"
+   title="Internal / Media / 640px-Doge_homemade_meme.jpg" style="display: block; margin-left: auto; margin-right: auto; border: 1px solid #ccc;"></img>
+     <figcaption style="font-size: 13px;" title="Media / Caption"><i>The Doge 'Meme'
+	 (Image Source: <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Doge_homemade_meme.jpg/640px-Doge_homemade_meme.jpg">Wikimedia Commons</a> <sup>[1]</sup>)</i></figcaption>
+ 
+    <figcaption style="font-size: 13px;" title="Topic / Meme Birth">Birth of Meme: 2013</figcaption>
+  <figcaption style="font-size: 13px;" title="Topic / Meme Death">Death of Meme: Not recorded</figcaption>
+</figure>
+	
+  <p title="Information / Source (Read the Sources page for more)"><i><b>Information provided by FindOut Search</i></b></p>
+   
+  <p title="Topic / Information">&#x2022; the 'doge' is an image of a shiba inu sitting down that was uploaded to a social media platform. the image soon gained popularity as a
+  'meme' and eventually got a cryptocurrency named after it, called 'dogecoin'.</p>
+  <details open>
+<summary title="Topic / Relation #1"><b>Related: Dogecoin</b></summary>
+	    <sup title="Related / Stock Market"><i>*DOGE (Ɖ) via Nasdaq</i></sup>
+ <p title="Related / Information">&#x2022; 'dogecoin' is a 'cryptocurrency'
+that was made after/in response to the popularization of the 'doge'.</p>
+</details>
+	<details>
+	<summary title="Topic / Comments" style="color:#FFC000;"><b>Comments ✧ <sup>[1]</sup></b></summary>
+	<p title="Topic / Comment by @eeee"><b style="color:#FFC000;">@eeee</b> didnt doge die? why is this still a page?</p>
+	</details>	
+	
+  <p title="Topic / Disambiguation"><b>[Disambiguation unavailable for this topic...]</b></p>
+    
+    <p title="Topic / Links"><b>Links:</b></p>
+    <p title="Links / Link #1">&#x2022; <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Doge_homemade_meme.jpg/640px-Doge_homemade_meme.jpg">Wikimedia Commons: 640px-Doge_homemade_meme.jpg</a> <sup>[1]</sup></p>
+  
+</div>
+<div id="Math" class="tabcontent">
+  <h6 title="Topic / Breadcrumb">Internal / Topic / Math <img src="content/fsunlock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Neutral Page / Unlocked" title="Neutral Page / Unlocked"></img></h6>
+  <h3 class="header" title="Topic / Math">Math</h3>
+  <hr title="Topic / Divider">
+  <p title="Information / Source (Read the Sources page for more)"><i><b>Information provided by FindOut Search</i></b></p>
+   
+  <p title="Topic / Information">&#x2022; 'math' is a field of academic interest and knowledge involving 4 main operations; addition, subtraction, division, and multiplication.</p>
+<details open>
+ <summary title="Topic / Relation #1"><b>Related: Proportional Reasoning & How To Solve</b></summary>
+ <p title="Related / Information">&#x2022; to solve a 'proportional reasoning' problem, set up your 'proportions'. every 'proportion' must
+include a 'variable' (eg. x or y). once your 'proportion' is set up, 'cross multiply' by 'multiplying' top left to bottom right
+and bottom left to top right. once done, divide everything by the number you 'multiplied' with you 'variable'. once this is done,
+'divide' both 'numerators' to get the 'equivalent' of your 'variable'.</p>
+</details>
+		<details>
+	<summary title="Topic / Comments" style="color:#FFC000;"><b>Comments ✧ <sup>[1]</sup></b></summary>
+	<p title="Topic / Comment by @slxve"><b style="color:#FFC000;">@slxve</b> not me using this for hs</p>
+	</details>	
+	
+  <p title="Topic / Disambiguation"><b>[Disambiguation unavailable for this topic...]</b></p>
+    
+    <p title="Topic / Links"><b>[Links unavailable for this topic...]</b></p>
+</div>
+<div id="Coding" class="tabcontent">
+  <h6 title="Topic / Breadcrumb">Internal / Topic / Coding <img src="content/fslegacylock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Legacy Page / Locked" title="Legacy Page / Locked"></img></h6>
+  <h3 class="header" title="Topic / Coding">Coding</h3>
+  <hr title="Topic / Divider">
+  <p title="Information / Source (Read the Sources page for more)"><i><b>Information provided by FindOut Search</i></b></p>
+   
+  <p title="Topic / Information">&#x2022; the process of using a computer lanuage or front/back-end language to create
+  a program or display something.</p>
+  <details open>
+ <summary title="Topic / Relation #1"><b>Related: Hypertext Markup Language (HTML)</b></summary>
+ <p title="Related / Information">&#x2022; 'hypertext markup language' (or html) is a front-end markup language
+which is used with the primary intent to show main content on a 'web page'.</p>
+</details>
+  <details open>
+ <summary title="Topic / Relation #2"><b>Related: Cascading Style Sheets (CSS)</b></summary>
+ <p title="Related / Information">&#x2022; 'cascading style sheets' (or css) is a front-end styling
+language which is used with the primary intent of syling 'html' code with an 'id', 'class', or 'attribute'.
+'css' code can be inserted directly into a 'style' tag, an 'attribute', or through an 'external' file.</p>
+</details>
+	<details>
+	<summary title="Topic / Comments" style="color:#FFC000;"><b>Comments ✧ <sup>[1]</sup></b></summary>
+	<p title="Topic / Comment by @one"><b style="color:#FFC000;">@one</b> We love coding</p>
+	</details>	
+  <p title="Topic / Disambiguation"><b>[Disambiguation unavailable for this topic...]</b></p>
+  
+    <p title="Topic / Links"><b>[Links unavailable for this topic...]</b></p>
+</div>
+<div id="Elon Musk" class="tabcontent">
+  <h6 title="Person / Breadcrumb">Internal / Person / Elon Musk <img src="content/fslegacylock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Legacy Page / Locked" title="Legacy Page / Locked"></img></h6>
+  <h3 class="header" title="Person / Elon Musk">Elon Musk</h3>
+  <hr title="Person / Divider">
+	
+   <figure style="float: right;" class="mobileHide">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Elon_Musk_and_the_Neuralink_Future.jpg/640px-Elon_Musk_and_the_Neuralink_Future.jpg
+   " width="auto" height="195" alt="Internal / Media / 640px-Elon_Musk_and_the_Neuralink_Future.jpg"
+   title="Internal / Media / 640px-Elon_Musk_and_the_Neuralink_Future.jpg" style="display: block; margin-left: auto; margin-right: auto; border: 1px solid #ccc;"></img>
+     <figcaption style="font-size: 13px;" title="Media / Caption"><i>Photo of Elon Musk
+	 (Image Source: <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Elon_Musk_and_the_Neuralink_Future.jpg/640px-Elon_Musk_and_the_Neuralink_Future.jpg">Wikimedia Commons</a> <sup>[1]</sup>)</i></figcaption>
+ 
+ <figcaption style="font-size: 13px;" title="Person / Birthday">Born: June 28th, 1971</figcaption>
+  <figcaption style="font-size: 13px;" title="Person / Net Worth Hierarchy">Net Worth Hierarchy: Second Richest (Globally)</figcaption>
+</figure>
+	
+  <p title="Information / Source (Read the Sources page for more)"><i><b>Information provided by FindOut Search</i></b></p>
+   
+  <p title="Person / Information">&#x2022; 'elon musk' (full name: elon reeve musk) is the (as of january 28th, 2023) ceo of 'twitter', founder of 'spacex', and ceo of 'tesla motors'. he is also the second richest person in the world (as of february 1st 2023 according to <a href="https://www.forbes.com/real-time-billionaires/#229644de3d78">forbes</a> <sup>[2]</sup>).</p>
+    <details open>
+<summary title="Topic / Relation #1"><b>Related: Twitter</b></summary>
+	    <sup title="Related / Stock Market"><i>*TWTR via Nasdaq</i></sup>
+ <p title="Related / Information">&#x2022; 'twitter' is a social media platform where users
+can post 'tweets' containing media and text, media only, or plain text. as of february 1st, 2023, 'elon musk' is the ceo of 'twitter'.</p>
+</details>
+ 
+	<details>
+	<summary title="Topic / Comments" style="color:#FFC000;"><b>Comments ✧ <sup>[1]</sup></b></summary>
+	<p title="Topic / Comment by @crzyw"><b style="color:#FFC000;">@crzyw</b> elo</p>
+	</details>	
+	
+	<p title="Person / Disambiguation"><b>[Disambiguation unavailable for this person...]</b></p>
+  
+    <p title="Person / Links"><b>Links:</b></p>
+	 <p title="Links / Link #1">&#x2022; <a href="https://www.forbes.com/real-time-billionaires/#229644de3d78">Forbes: Real Time Billionares</a> <sup>[1]</sup></p>
+         <p title="Links / Link #2">&#x2022; <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Elon_Musk_and_the_Neuralink_Future.jpg/640px-Elon_Musk_and_the_Neuralink_Future.jpg">Wikimedia Commons: 640px-Elon_Musk_and_the_Neuralink_Future.jpg</a> <sup>[2]</sup></p>
+</div>
+<div id="Youtubers" class="tabcontent">
+  <h6 title="Topic / Breadcrumb">Internal / Topic / Youtubers <img src="content/fslegacylock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Legacy Page / Locked" title="Legacy Page / Locked"></img></h6>
+  <h3 class="header" title="Topic / Youtubers">Youtubers</h3>
+  <hr title="Topic / Divider">
+<figure style="float: right;" class="mobileHide">
+ <figcaption style="font-size: 13px; margin-top: 0px;" title="Topic / Primary Platform">Primary Platform: YouTube</figcaption>
+  <figcaption style="font-size: 13px;" title="Topic / General Subscribers">Generally Considered Amount of Subscribers: 70,000+</figcaption>
+  <figcaption style="font-size: 13px;" title="Topic / Most Subscribed">Most Subscribed Youtuber: MrBeast (120,000,000+ Subscribers)</figcaption>
+</figure>
+  <p title="Information / Source (Read the Sources page for more)"><i><b>Information provided by FindOut Search</i></b></p>
+   
+  <p title="Topic / Information">&#x2022; 'youtubers' are mainly known for appearing on the video sharing platform 'youtube'.
+	'youtubers' often have a high amount of 'subscribers' (generally 70,000+) and are well known in the 'youtube' community.</p>
+	<details>
+	<summary title="Topic / Comments" style="color:#FFC000;"><b>Comments ✧ <sup>[1]</sup></b></summary>
+	<p title="Topic / Comment by @mrbeast"><b style="color:#FFC000;">@mrbeast</b> lol mrbeast!</p>
+	</details>	
+	
+  <p title="Topic / Disambiguation"><b>[Disambiguation unavailable for this topic...]</b></p>
+    
+    <p title="Topic / Links"><b>[Links unavailable for this topic...]</b></p>
+</div>
+<div id="Google" class="tabcontent">
+  <h6 title="Topic / Breadcrumb">Internal / Topic / Google <img src="content/fslegacylock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Legacy Page / Locked" title="Legacy Page / Locked"></img></h6>
+  <h3 class="header" title="Topic / Google">Google</h3>
+  <hr title="Topic / Divider">
+<figure style="float: right;" class="mobileHide">
+ <figcaption style="font-size: 13px; margin-top: 0px;" title="Topic / Founders">Founders: Sergey Brin, Larry Page</figcaption>
+  <figcaption style="font-size: 13px;" title="Topic / Visits Per Month">Visits Per Month (www.google.com): 89,000,000,000+</figcaption>
+  <figcaption style="font-size: 13px;" title="Topic / Date Founded">Founded: September 4th, 1998</figcaption>
+</figure>
+  <p title="Information / Source (Read the Sources page for more)"><i><b>Information provided by FindOut Search</i></b></p>
+   
+  <p title="Topic / Information">&#x2022; 'google' is a technology company
+  mainly focused on 'google search', 'search engines' (related to google search),
+computing/computer 'software', and 'AI' (or artificial intelligence).</p>
+  
+    <details open>
+<summary title="Topic / Relation #1"><b>Related: Sergey Brin</b></summary>
+ <p title="Related / Information">&#x2022; 'sergey brin' is an american internet entrepreneur
+ most famously known for co-founding 'google' alongside 'larry page'.</p>
+</details>
+    <details open>
+<summary title="Topic / Relation #2"><b>Related: Larry Page</b></summary>
+ <p title="Related / Information">&#x2022; 'larry page' is an american interent entrepreneur
+ most famously known for co-founding 'google' alongside 'sergey brin'.</p>
+</details>
+	<details>
+	<summary title="Topic / Comments" style="color:#FFC000;"><b>Comments ✧ <sup>[4]</sup></b></summary>
+	<p title="Topic / Comment by @firstonelast"><b style="color:#FFC000;">@firstonelast</b> Used this in a book report, didnt know who Sergey Brin was till i read this.</p>
+	<p title="Topic / Comment by @sjskizzy"><b style="color:#FFC000;">@sjskizzy</b> love how the information is Just simple and dumbed down</p>
+	<p title="Topic / Comment by @Hxgs4sphie"><b style="color:#FFC000;">@Hxgs4sphie</b> Tbh this is better than Wikipedia. I like how the info is straight to the point. A friend recommended this site btw.</p>
+	<p title="Topic / Comment by @one"><b style="color:#FFC000;">@one</b> This is new.</p>
+	</details>
+	
+  <p title="Topic / Disambiguation"><b>[Disambiguation unavailable for this topic...]</b></p>   
+ <p title="Topic / Links"><b>[Links unavailable for this topic...]</b></p>
+</div>
+<div id="Barbie" class="tabcontent">
+  <h6 title="Topic / Breadcrumb">Internal / Topic / Barbie <img src="content/fsunlock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Neutral Page / Unlocked" title="Neutral Page / Unlocked"></img></h6>
+  <h3 class="header" title="Topic / Barbie">Barbie</h3>
+  <hr title="Topic / Divider">
+<figure style="float: right;" class="mobileHide">
+ <figcaption style="font-size: 13px; margin-top: 0px;" title="Topic / Created By">Created By: Ruth Handler</figcaption>
+  <figcaption style="font-size: 13px;" title="Topic / First Appearance">First Appearance: March 9th, 1959</figcaption>
+</figure>
+  <p title="Information / Source (Read the Sources page for more)"><i><b>Information provided by FindOut Search</i></b></p>
+   
+  <p title="Topic / Information">&#x2022; 'barbie' or 'barbies' are a line of fashion dolls created by buisnesswoman 
+	  'ruth handler'. 'barbies' are manufactured by the american toy company 'mattel'.</p>
+  
+    <details open>
+<summary title="Topic / Relation #1"><b>Related: Mattel</b></summary>
+ <p title="Related / Information">&#x2022; 'mattel' is an american toy company founded by 'ruth handler' and 'elliot handler' 
+	 in los angeles. 'mattel' manufactures toys such as 'hot wheels' and 'barbies'.</p>
+</details>
+	<details>
+	<summary title="Topic / Comments" style="color:#FFC000;"><b>Comments ✧ <sup>[4]</sup></b></summary>
+	<p title="Topic / Comment by @one"><b style="color:#FFC000;">@one</b> Just watched the Barbie movie, it was great!</p>
+	<p title="Topic / Comment by @hellokitty"><b style="color:#FFC000;">@hellokitty</b> hi</p>
+	<p title="Topic / Comment by @ssdj"><b style="color:#FFC000;">@ssdj</b> ew whys pink.</p>
+	<p title="Topic / Comment by @one"><b style="color:#FFC000;">@one</b> ?</p>
+	</details>
+    <details>
+<summary title="Topic / Disambiguation"><b>Disambiguation: Barbie Movie</b></summary>
+ <p title="Disambiguation / Information">&#x2022; the 'barbie' movie is a film released on july 21st, 2023. the film 
+ is rated pg-13 and is about 1 hour and 54 minutes long.</p>
+</details>
+    
+    <p title="Topic / Links"><b>[Links unavailable for this topic...]</b></p>
+</div>
+<div id="TikTok Rizz Party" class="tabcontent">
+  <h6 title="Topic / Breadcrumb">Internal / Topic / TikTok Rizz Party <img src="content/fsunlock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Neutral Page / Unlocked" title="Neutral Page / Unlocked"></img></h6>
+  <h3 class="header" title="Topic / TikTok Rizz Party">TikTok Rizz Party</h3>
+  <hr title="Topic / Divider">
+<figure style="float: right;" class="mobileHide">
+  <figcaption style="font-size: 13px; margin-top: 0px;" title="Topic / Posted">Posted: March 10th, 2024</figcaption>
+  <figcaption style="font-size: 13px;" title="Topic / Uploaded By">Uploaded By: Island Entertainment</figcaption>
+</figure>
+  <p title="Information / Source (Read the Sources page for more)"><i><b>Information provided by FindOut Search</i></b></p>
+   
+  <p title="Topic / Information">&#x2022; the 'tiktok rizz party' is a video uploaded to the social media platform, 'tiktok', by a family-owned party planning company at a sweet 16. in the video, several teenage 
+  boys could be seen dancing to the song 'carnival' by artist 'kanye west'.</p>
+	<details>
+	<summary title="Topic / Comments" style="color:#FFC000;"><b>Comments ✧ <sup>[1]</sup></b></summary>
+	<p title="Topic / Comment by @eeee"><b style="color:#FFC000;">@eeee</b> yay.</p>
+	</details>
+  <p title="Topic / Disambiguation"><b>[Disambiguation unavailable for this topic...]</b></p>   
+ <p title="Topic / Links"><b>[Links unavailable for this topic...]</b></p>
+</div>
+	
+<div id="footer" style="text-align: center;">
+<h5 title="The Privacy Policy and Sources Page">The Privacy Policy is available on the right side of the navigation bar. Copying text? Read section 3 of the Sources page.</h5>
+<h5 title="Socials">Reach out to the founder of FindOut Search via Discord @ <i>vhxs_</i> and @ <i>vxmpzghxst</i> on nearly all other social platforms.</h5>
+<h5 title="Copyright Statement">Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> FindOut Search. All rights reserved.</h5>
+</div>
+<script src="external/script.js"></script>
+<script id="dsq-count-scr" src="//fndtsrch.disqus.com/count.js" async></script>
 </body>
 </html>
