@@ -23,9 +23,9 @@
 <div class="tab">
   <img src="content/fsiconnobg.png" width="auto" height="48" onClick="window.location.href=window.location.href"
   style="display: block; margin-left: auto; margin-right: auto; float: left;" alt="Refresh Page" title="Refresh Page"></img>
-  <button class="tablinks" onclick="openTopic(event, 'Privacy Policy')" style="float: right;" title="Internal / Privacy Policy">Privacy Policy</button>
+  <button class="tablinks" onclick="openTopic(event, 'Privacy Policy') reset('newid1', 'https://itsaminowo.github.io/findoutsearch/', 'Privacy Policy', 'en');" style="float: right;" title="Internal / Privacy Policy">Privacy Policy</button>
   <button class="tablinks" onclick="openTopic(event, 'Sources')" style="float: right;" title="Internal / Sources">Sources</button>
-  <button class="tablinks" onclick="openTopic(event, 'Chat Board')" style="float: right;" title="Internal / Submit A Comment">Chat Board</button>
+  <button class="tablinks" onclick="openTopic(event, 'Chat Board') reset('newid2', 'https://itsaminowo.github.io/findoutsearch/', 'Chat Board', 'en');" style="float: right;" title="Internal / Submit A Comment">Chat Board</button>
   <button class="tablinks" onclick="openTopic(event, 'Submit A Comment')" style="float: right;" title="Internal / Submit A Comment">Submit A Comment</button>
   <button class="tablinks" onclick="openTopic(event, 'Main Page')" style="float: right;" id="opendefualt" title="Internal / Main Page">Main Page</button>
   <button class="tablinks" onclick="openTopic(event, 'Anime')" title="Topic / Anime">Anime</button>
@@ -104,6 +104,38 @@ is at the top-right corner of your screen.</p>
   <p title="Privacy Policy / Third Parties"><b>Third Parties</b></p>
    <p title="Third Parties / Explanation">&#x2022; FindOut Search uses the thrid-party system, Google Search Console, by Google LLC, to collect user data such as the country where a device that visits FindOut Search may be located, 
    or the type of device that visits FindOut Search (such as desktops, mobile devices, etc.). We recommend that you read Google's general <a href="https://policies.google.com/privacy?hl=en">Privacy Policy</a>.</p>
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'fndtsrch';
+    var disqus_identifier = '001';
+    var disqus_url = 'https://itsaminowo.github.io/findoutsearch/';
+	var disqus_config = function () { 
+	  this.language = "en";
+	};
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + 'fndtsrch.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * Disqus Reset Function * * */
+    var reset = function (newIdentifier, newUrl, newTitle, newLanguage) {
+        DISQUS.reset({
+            reload: true,
+            config: function () {
+                this.page.identifier = newIdentifier;
+                this.page.url = newUrl;
+                this.page.title = newTitle;
+                this.language = newLanguage;
+            }
+        });
+    };
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
 </div>
 <div id="Sources" class="tabcontent">
   <h6 title="Sources / Breadcrumb">Internal / Sources <img src="content/fsadminlock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Admin Page / Locked" title="Admin Page / Locked"></img></h6>
@@ -143,24 +175,36 @@ is at the top-right corner of your screen.</p>
 <p title="Chat Board / Chat Board Credits"><b>Chat Board Credits</b></p>
 <p title="Chat Board Credits / Credit to Disqus">&#x2022; The addition of the chat board on April 11th 2024 has been made possible by the threads and forums provider, 'Disqus'.</p>
 <div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = https://itsaminowo.github.io/findoutsearch/;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = 01; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://fndtsrch.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'fndtsrch';
+    var disqus_identifier = '001';
+    var disqus_url = 'https://itsaminowo.github.io/findoutsearch/';
+	var disqus_config = function () { 
+	  this.language = "en";
+	};
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + 'fndtsrch.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
+
+    /* * * Disqus Reset Function * * */
+    var reset = function (newIdentifier, newUrl, newTitle, newLanguage) {
+        DISQUS.reset({
+            reload: true,
+            config: function () {
+                this.page.identifier = newIdentifier;
+                this.page.url = newUrl;
+                this.page.title = newTitle;
+                this.language = newLanguage;
+            }
+        });
+    };
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
 	
 <div id="Anime" class="tabcontent">
