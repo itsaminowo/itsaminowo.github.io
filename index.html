@@ -20,7 +20,29 @@
     and (max-device-width : 480px){
      .mobileHide { display: none;}
   }
-</style>
+<!-- MIGRATION NTC, DELETE AFTER 48 HRS --> 
+.migrationntc {
+  padding: 20px;
+  background-color: #737373;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+<!-- MIGRATION NTC, DELETE AFTER 48 HRS --> 
+<style>
 </head>
 <div class="tab">
   <img src="content/fsiconnobg.png" width="auto" height="48" onClick="window.location.href=window.location.href"
@@ -42,6 +64,10 @@
   <button class="tablinks" onclick="openTopic(event, 'TikTok Rizz Party')" title="Topic / TikTok Rizz Party">TikTok Rizz Party</button>
   <input id="searchbar" onkeyup="search_page()" type="text" name="search" placeholder="Don't find what you're looking for up there? Search for a page..." title="Search For a Page">
   
+</div>
+<div class="migrationntc">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  Redirected from <i>itsaminowo.github.io/findoutsearch/</i>? We're now migrating to a more simple URL: <i>itsaminowo.github.io</i>. As migration occurs, you may experience some trouble accessing FindOut Search.*
 </div>
 <div id="Unavailable" class="tabcontent">
   <h6 title="Internal / Breadcrumb">Internal / [Unavailable] <img src="content/fsadminlock.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Admin Page / Locked" title="Admin Page / Locked"></img><img src="content/fsquestion.png" width="auto" height="30" style="display: block; margin-left: auto; margin-right: auto; float: right;" alt="Admin Page / Unavailable" title="Admin Page / Unavailable"></img></h6>
