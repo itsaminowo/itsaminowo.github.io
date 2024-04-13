@@ -56,14 +56,6 @@ a:hover {
 color: #551A8B;
   text-decoration: underline;
 }
-.fontawesome {
-  text-decoration: none;
-  color: black;
-}
-.fontawesome:hover {
-  text-decoration: none;
-  color: #737373;
-}
 .download {
   text-decoration: none;
   color: #FFC000;
@@ -71,6 +63,14 @@ color: #551A8B;
 .download:hover {
   text-decoration: none;
   color: #FFD34F;
+}
+.fontawesome {
+  text-decoration: none;
+  color: black;
+}
+.fontawesome:hover {
+  text-decoration: none;
+  color: #737373;
 }
 .header {
   font-family: "Times New Roman", Times, serif;
